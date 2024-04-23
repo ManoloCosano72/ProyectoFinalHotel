@@ -17,7 +17,7 @@ public class Hotel {
     public Hotel() {
     }
 
-    public enum rate{
+    private enum rate{
         FIVE,
         FOUR,
         THREE,
