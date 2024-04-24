@@ -76,4 +76,7 @@ public class ConnectionProperties implements Serializable {
                 ", password = " + password +
                 ']';
     }
+    public String getURL(){
+        return "jdbc:mariadb://"+server+":"+port+"/"+database;
+    }
 }
