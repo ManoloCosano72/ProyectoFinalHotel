@@ -7,22 +7,17 @@ public class Hotel {
     private String name;
     private String address;
     private String phone;
-    public Hotel(String codHotel, String name, String address, String phone) {
+    private Rate rate;
+
+    public Hotel(String codHotel, String name, String address, String phone, Rate rate) {
         CodHotel = codHotel;
         this.name = name;
         this.address = address;
         this.phone = phone;
+        this.rate = rate;
     }
 
     public Hotel() {
-    }
-
-    private enum rate{
-        FIVE,
-        FOUR,
-        THREE,
-        TWO,
-        ONE
     }
 
     public String getCodHotel() {
@@ -57,6 +52,14 @@ public class Hotel {
         this.phone = phone;
     }
 
+    public Rate getRate() {
+        return rate;
+    }
+
+    public void setRate(Rate rate) {
+        this.rate = rate;
+    }
+
     @Override
     public boolean equals(Object obj) {
         boolean isEquals;
@@ -80,10 +83,11 @@ public class Hotel {
     @Override
     public String toString() {
         return "Hotel[" +
-                "CodHotel = " + CodHotel +
+                "CodHotel =" + CodHotel +
                 ", name = " + name +
-                ", address = " + address  +
-                ", phone = " + phone  +
+                ", address = " + address +
+                ", phone = " + phone +
+                ", rate = " + rate +
                 ']';
     }
 }
