@@ -7,20 +7,19 @@ public class Room {
     private int bed;
     private int windows;
     private float price;
+    private TypeR typeR;
+    private Hotel codHotel;
 
-    public Room(String codRoom, int bed, int windows, float price) {
+    public Room(String codRoom, int bed, int windows, float price, TypeR typeR, Hotel codHotel) {
         this.codRoom = codRoom;
         this.bed = bed;
         this.windows = windows;
         this.price = price;
+        this.typeR = typeR;
+        this.codHotel = codHotel;
     }
 
     public Room() {
-    }
-    public enum typeR{
-        SUITE,
-        BIGGER,
-        DELUXE
     }
 
     public String getCodRoom() {
@@ -55,15 +54,30 @@ public class Room {
         this.price = price;
     }
 
+    public TypeR getTypeR() {
+        return typeR;
+    }
+
+    public void setTypeR(TypeR typeR) {
+        this.typeR = typeR;
+    }
+
+    public Hotel getCodHotel() {
+        return codHotel;
+    }
+
+    public void setCodHotel(Hotel codHotel) {
+        this.codHotel = codHotel;
+    }
+
     @Override
     public boolean equals(Object obj) {
         boolean isEquals;
-        if (this == obj){
+        if (this == obj) {
             isEquals = true;
-        }
-        else if (obj == null || getClass() != obj.getClass()){
+        } else if (obj == null || getClass() != obj.getClass()) {
             isEquals = false;
-        }else{
+        } else {
             Room room = (Room) obj;
             return Objects.equals(codRoom, room.codRoom);
         }
@@ -78,10 +92,12 @@ public class Room {
     @Override
     public String toString() {
         return "Room[" +
-                "codRoom = " + codRoom +
-                ", bed =" + bed +
+                "codRoom=  " + codRoom +
+                ", bed = " + bed +
                 ", windows = " + windows +
                 ", price = " + price +
+                ", typeR ="  + typeR +
+                ", codHotel = " + codHotel +
                 ']';
     }
 }
