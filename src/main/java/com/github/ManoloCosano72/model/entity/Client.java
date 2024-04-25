@@ -1,5 +1,7 @@
 package com.github.ManoloCosano72.model.entity;
 
+import com.github.ManoloCosano72.model.entity.enums.Rank;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -10,8 +12,8 @@ public class Client extends User{
     private List<Reserve> reserves;
 
 
-    public Client(String name, String username, String password, String mail) {
-        super(name, username, password, mail);
+    public Client(String name, String username, String password, String mail, Rank rank, String dni, String surnames, String phone, List<Reserve> reserves) {
+        super(name, username, password, mail, rank);
     }
 
     public Client() {
@@ -57,15 +59,15 @@ public class Client extends User{
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object obj) {
         boolean isEquals;
-        if (this == o){
+        if (this == obj){
             isEquals = true;
         }
-        else if (o == null || getClass() != o.getClass()){
+        else if (obj == null || getClass() != obj.getClass()){
             isEquals = false;
         }else{
-            Client client = (Client) o;
+            Client client = (Client) obj;
             return Objects.equals(Dni, client.Dni);
         }
         return isEquals;
@@ -74,7 +76,7 @@ public class Client extends User{
 
     @Override
     public int hashCode() {
-        return Objects.hash(Dni, surnames, phone, reserves);
+        return Objects.hash(super.username, super.password, Dni);
     }
 
     @Override

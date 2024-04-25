@@ -1,4 +1,4 @@
-package com.github.ManoloCosano72.model.entity;
+package com.github.ManoloCosano72.model.entity.enums;
 
 public enum Rate {
     FIVE("5"),

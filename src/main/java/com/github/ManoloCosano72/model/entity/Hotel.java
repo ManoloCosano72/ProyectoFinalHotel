@@ -1,5 +1,7 @@
 package com.github.ManoloCosano72.model.entity;
 
+import com.github.ManoloCosano72.model.entity.enums.Rate;
+
 import java.util.Objects;
 
 public class Hotel {
