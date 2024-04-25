@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 public class Validation {
     public static boolean validatePassword(String password) {
         boolean result = false;
-        Pattern contrasenaPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%*?&])[A-Za-z\\d@$!.#_()%*?&]{8,}$");
-        Matcher contrasenaMatcher = contrasenaPattern.matcher(password);
+        Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%*?&])[A-Za-z\\d@$!.#_()%*?&]{8,}$");
+        Matcher passeordMatcher = passwordPattern.matcher(password);
         return result;
     }
 

@@ -1,37 +1,42 @@
 package com.github.ManoloCosano72.model.entity;
 
-import com.github.ManoloCosano72.model.entity.enums.Rank;
 
 import java.util.List;
 import java.util.Objects;
 
-public class Client extends User{
-    private String Dni;
+public class Client{
+    private String dni;
+    private String name;
     private String surnames;
     private String phone;
+    private String mail;
     private List<Reserve> reserves;
 
-
-    public Client(String name, String username, String password, String mail, Rank rank, String dni, String surnames, String phone, List<Reserve> reserves) {
-        super(name, username, password, mail, rank);
+    public Client(String dni, String name, String surnames, String phone, String mail) {
+        this.dni = dni;
+        this.name = name;
+        this.surnames = surnames;
+        this.phone = phone;
+        this.mail = mail;
     }
 
     public Client() {
     }
 
-    public Client(String dni, String surnames, String phone, List<Reserve> reserves) {
-        Dni = dni;
-        this.surnames = surnames;
-        this.phone = phone;
-        this.reserves = reserves;
-    }
-
     public String getDni() {
-        return Dni;
+        return dni;
     }
 
     public void setDni(String dni) {
-        Dni = dni;
+        this.dni = dni;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurnames() {
@@ -50,12 +55,12 @@ public class Client extends User{
         this.phone = phone;
     }
 
-    public List<Reserve> getReserves() {
-        return reserves;
+    public String getMail() {
+        return mail;
     }
 
-    public void setReserves(List<Reserve> reserves) {
-        this.reserves = reserves;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     @Override
@@ -64,31 +69,27 @@ public class Client extends User{
         if (this == obj){
             isEquals = true;
         }
-        else if (obj == null || getClass() != obj.getClass()){
-            isEquals = false;
+       else if (obj == null || getClass() != obj.getClass()){
+            isEquals =  false;
         }else{
             Client client = (Client) obj;
-            return Objects.equals(Dni, client.Dni);
+            return Objects.equals(dni, client.dni);
         }
-        return isEquals;
+       return isEquals;
     }
-
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.username, super.password, Dni);
+        return Objects.hash(dni, name, surnames, phone, mail);
     }
 
     @Override
     public String toString() {
         return "Client[" +
-                "Dni = " + Dni +
+                "dni = " + dni +
+                ", name = " + name +
                 ", surnames = " + surnames +
                 ", phone = " + phone +
-                ", reserves = " + reserves +
-                ", name = " + name +
-                ", username = " + username +
-                ", password = " + password +
                 ", mail = " + mail +
                 ']';
     }
