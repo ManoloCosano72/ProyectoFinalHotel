@@ -44,14 +44,14 @@ public class Reserve {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object obj) {
         boolean isEquals;
-        if (this == o) {
+        if (this == obj) {
             isEquals = true;
-        } else if (o == null || getClass() != o.getClass()) {
+        } else if (obj == null || getClass() != obj.getClass()) {
             isEquals = false;
         } else {
-            Reserve reserve = (Reserve) o;
+            Reserve reserve = (Reserve) obj;
             return Objects.equals(codReserve, reserve.codReserve);
         }
         return isEquals;

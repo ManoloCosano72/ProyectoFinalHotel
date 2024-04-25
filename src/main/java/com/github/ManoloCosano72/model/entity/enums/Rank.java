@@ -1,8 +1,8 @@
 package com.github.ManoloCosano72.model.entity.enums;
 
 public enum Rank {
-    ADMIN("Admin"),
-    CLIENT("Client");
+    MANAGER("Admin"),
+    CLIENTUSER("Client");
 
     private String rank;
 
