@@ -10,14 +10,17 @@ public class Reserve {
     private String codRoom;
     private List<Client> clients;
 
-    public Reserve(String codReserve, Date date, String codRoom) {
+    public Reserve(String codReserve, Date date, String codRoom, List<Client> clients) {
         this.codReserve = codReserve;
         this.date = date;
         this.codRoom = codRoom;
+        this.clients = clients;
     }
 
     public Reserve() {
     }
+
+
 
     public String getCodReserve() {
         return codReserve;
@@ -42,6 +45,13 @@ public class Reserve {
     public void setCodRoom(String codRoom) {
         this.codRoom = codRoom;
     }
+    public List<Client> getClients() {
+        return clients;
+    }
+
+    public void setClients(List<Client> clients) {
+        this.clients = clients;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -60,7 +70,7 @@ public class Reserve {
 
     @Override
     public int hashCode() {
-        return Objects.hash(codReserve, date,codRoom);
+        return Objects.hash(codReserve);
     }
 
     @Override
@@ -69,6 +79,7 @@ public class Reserve {
                 "codReserve = " + codReserve +
                 "date = " + date +
                 "codRoom = " + codRoom +
+                "clients = " + clients +
                 ']';
     }
 }
