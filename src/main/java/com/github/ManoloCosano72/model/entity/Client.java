@@ -10,27 +10,20 @@ public class Client{
     private String surnames;
     private String phone;
     private String mail;
-    private List<Reserve> reserves;
 
-    public Client(String dni, String name, String surnames, String phone, String mail,List<Reserve> reserves) {
+
+    public Client(String dni, String name, String surnames, String phone, String mail) {
         this.dni = dni;
         this.name = name;
         this.surnames = surnames;
         this.phone = phone;
         this.mail = mail;
-        this.reserves = reserves;
+
     }
 
     public Client() {
     }
 
-    public List<Reserve> getReserves() {
-        return reserves;
-    }
-
-    public void setReserves(List<Reserve> reserves) {
-        this.reserves = reserves;
-    }
 
     public String getDni() {
         return dni;
@@ -100,7 +93,6 @@ public class Client{
                 ", surnames = " + surnames +
                 ", phone = " + phone +
                 ", mail = " + mail +
-                ", reserves = " + reserves +
                 ']';
     }
 }
