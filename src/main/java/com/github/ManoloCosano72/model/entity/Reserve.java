@@ -1,7 +1,6 @@
 package com.github.ManoloCosano72.model.entity;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 
 public class Reserve {

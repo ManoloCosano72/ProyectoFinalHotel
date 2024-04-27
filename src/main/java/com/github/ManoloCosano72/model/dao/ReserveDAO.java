@@ -23,11 +23,11 @@ public class ReserveDAO implements DAO<Reserve, String> {
 
     @Override
     public Reserve save(Reserve entity) {
-        /*Reserve result = entity;
+        Reserve result = entity;
         if (entity != null) {
-            String isbn = entity.getCodReserve();
-            if (isbn != null) {
-                Reserve isInDataBase = ();
+            String codReserve = entity.getCodReserve();
+            if (codReserve != null) {
+                Reserve isInDataBase = findByDni(codReserve);
                 if (isInDataBase == null) {
                     try (PreparedStatement pst = conn.prepareStatement(INSERT)) {
                         pst.setString(1, entity.getCodReserve());
@@ -41,8 +41,7 @@ public class ReserveDAO implements DAO<Reserve, String> {
                 }
             }
         }
-        */
-        return null;
+        return result;
     }
 
     @Override
