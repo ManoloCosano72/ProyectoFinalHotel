@@ -1,5 +1,6 @@
 package com.github.ManoloCosano72;
 
+import com.github.ManoloCosano72.view.AppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,12 +9,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
+
 public class App extends Application {
 
-    private static Scene scene;
+    public static Scene scene;
+    public static Stage stage;
+    public static AppController currentController;
 
     @Override
     public void start(Stage stage) throws IOException {
