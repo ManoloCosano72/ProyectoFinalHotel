@@ -1,16 +1,15 @@
 package com.github.ManoloCosano72.model.entity;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 
 public class Reserve {
     private String codReserve;
     private Date date;
     private String codRoom;
-    private List<Client> clients;
+    private Client clients;
 
-    public Reserve(String codReserve, Date date, String codRoom, List<Client> clients) {
+    public Reserve(String codReserve, Date date, String codRoom, Client clients) {
         this.codReserve = codReserve;
         this.date = date;
         this.codRoom = codRoom;
@@ -19,8 +18,6 @@ public class Reserve {
 
     public Reserve() {
     }
-
-
 
     public String getCodReserve() {
         return codReserve;
@@ -45,11 +42,12 @@ public class Reserve {
     public void setCodRoom(String codRoom) {
         this.codRoom = codRoom;
     }
-    public List<Client> getClients() {
+
+    public Client getClients() {
         return clients;
     }
 
-    public void setClients(List<Client> clients) {
+    public void setClients(Client clients) {
         this.clients = clients;
     }
 

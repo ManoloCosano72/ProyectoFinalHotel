@@ -25,37 +25,37 @@ public class ReserveDAO implements DAO<Reserve, String> {
     public Reserve save(Reserve entity) {
         Reserve result = entity;
         if (entity != null) {
-            String isbn = entity.getCodReserve();
-            if (isbn != null) {
-                Reserve isInDataBase = ();
+            String codReserve = entity.getCodReserve();
+            if (codReserve != null) {
+                Reserve isInDataBase = findByDni(codReserve);
                 if (isInDataBase == null) {
-                    //INSERT
                     try (PreparedStatement pst = conn.prepareStatement(INSERT)) {
                         pst.setString(1, entity.getCodReserve());
                         pst.setString(2, entity.getCodRoom());
-                        pst.setString(3,entity.getDate());
+                        pst.setString(3, String.valueOf(entity.getDate()));
                         pst.executeUpdate();
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-                    return null;
-                }
-
-                @Override
-                public Reserve delete (Reserve entity) throws SQLException {
-                    return null;
-                }
-
-                @Override
-                public Reserve findByDni (String key){
-                    return null;
-                }
-
-                @Override
-                public void close () throws IOException {
 
                 }
             }
         }
+        return result;
+    }
+
+    @Override
+    public Reserve delete(Reserve entity) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reserve findByDni(String key) {
+        return null;
+    }
+
+    @Override
+    public void close() throws IOException {
+
     }
 }
