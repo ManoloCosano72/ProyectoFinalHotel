@@ -73,7 +73,7 @@ public class Client{
             isEquals =  false;
         }else{
             Client client = (Client) obj;
-            return Objects.equals(dni, client.dni);
+            return Objects.equals(dni, client.dni) && Objects.equals(mail, client.mail);
         }
        return isEquals;
     }
