@@ -1,7 +1,6 @@
 package com.github.ManoloCosano72.model.dao;
 
 import com.github.ManoloCosano72.model.connection.ConnectionMariaDB;
-import com.github.ManoloCosano72.model.entity.Reserve;
 import com.github.ManoloCosano72.model.entity.Room;
 import com.github.ManoloCosano72.model.interfaces.DAO;
 
@@ -14,8 +13,8 @@ import java.sql.SQLException;
 public class RoomDAO implements DAO<Room, String> {
     private final static String FINDBYDNI = "";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
-    private final static String UPDATE = "UPDATE Room SET bed=? ,windows=?, price=? WHERE CodRoom=?";
-    private final static String INSERT = "INSERT INTO Room (CodRoom,bed, windows,price) VALUES (?,?,?,?)";
+    private final static String UPDATE = "UPDATE Room SET Beds=? ,Windows=?,TypeR=?, Price=? WHERE CodRoom=?";
+    private final static String INSERT = "INSERT INTO Room (CodRoom,Beds, Windows,TypeR,Price,CodHotel) VALUES (?,?,?,?,?,?)";
 
     private Connection conn;
 
@@ -33,8 +32,11 @@ public class RoomDAO implements DAO<Room, String> {
                 if (isInDataBase == null) {
                     try (PreparedStatement pst = conn.prepareStatement(INSERT)) {
                         pst.setString(1, entity.getCodRoom());
-                        pst.setInt(2, entity.getBed());
+                        pst.setInt(2, entity.getBeds());
                         pst.setInt(3, entity.getWindows());
+                        pst.setString(4, String.valueOf(entity.getTypeR()));
+                        pst.setFloat(5,entity.getPrice());
+                        pst.setString(6, String.valueOf(entity.getCodHotel()));
                         pst.executeUpdate();
                     } catch (SQLException e) {
                         e.printStackTrace();

@@ -6,15 +6,15 @@ import java.util.Objects;
 
 public class Room {
     private String codRoom;
-    private int bed;
+    private int beds;
     private int windows;
     private float price;
     private TypeR typeR;
     private Hotel codHotel;
 
-    public Room(String codRoom, int bed, int windows, float price, TypeR typeR, Hotel codHotel) {
+    public Room(String codRoom, int beds, int windows, float price, TypeR typeR, Hotel codHotel) {
         this.codRoom = codRoom;
-        this.bed = bed;
+        this.beds = beds;
         this.windows = windows;
         this.price = price;
         this.typeR = typeR;
@@ -32,12 +32,12 @@ public class Room {
         this.codRoom = codRoom;
     }
 
-    public int getBed() {
-        return bed;
+    public int getBeds() {
+        return beds;
     }
 
-    public void setBed(int bed) {
-        this.bed = bed;
+    public void setBeds(int beds) {
+        this.beds = beds;
     }
 
     public int getWindows() {
@@ -88,14 +88,14 @@ public class Room {
 
     @Override
     public int hashCode() {
-        return Objects.hash(codRoom, bed, windows, price);
+        return Objects.hash(codRoom, beds, windows, price);
     }
 
     @Override
     public String toString() {
         return "Room[" +
                 "codRoom=  " + codRoom +
-                ", bed = " + bed +
+                ", bed = " + beds +
                 ", windows = " + windows +
                 ", price = " + price +
                 ", typeR ="  + typeR +
