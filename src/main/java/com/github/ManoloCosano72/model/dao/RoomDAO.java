@@ -15,7 +15,7 @@ public class RoomDAO implements DAO<Room, String> {
     private final static String FINDBYDNI = "";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
     private final static String UPDATE = "UPDATE Room SET bed=? ,windows=?, price=? WHERE CodRoom=?";
-    private final static String INSERT = "INSERT INTO Room (CodRoom,bed, windows,price) VALUES (?,?,?,?";
+    private final static String INSERT = "INSERT INTO Room (CodRoom,bed, windows,price) VALUES (?,?,?,?)";
 
     private Connection conn;
 
