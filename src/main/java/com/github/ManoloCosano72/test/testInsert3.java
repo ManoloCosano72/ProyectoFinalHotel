@@ -4,12 +4,18 @@ import com.github.ManoloCosano72.model.dao.RoomDAO;
 import com.github.ManoloCosano72.model.entity.Room;
 import com.github.ManoloCosano72.model.entity.enums.TypeR;
 
+import static com.github.ManoloCosano72.model.entity.enums.TypeR.DELUXE;
+
 
 public class testInsert3 {
     public static void main(String[] args) {
-        Room r = new Room();
-        RoomDAO roDAO = new RoomDAO("1234567890ACBED",3,5, TypeR.DELUXE,187,"ABCD123456");
-        roDAO.save(r);
+       Room r = new Room();
+       r.setBeds(3);
+       r.setWindows(2);
+       r.setTypeR(TypeR.BIGGER);
+       r.setPrice(333);
+       RoomDAO roDAO = new RoomDAO();
+       roDAO.save(r);
     }
 
 }

@@ -2,6 +2,7 @@ package com.github.ManoloCosano72.model.dao;
 
 import com.github.ManoloCosano72.model.connection.ConnectionMariaDB;
 import com.github.ManoloCosano72.model.entity.Room;
+import com.github.ManoloCosano72.model.entity.enums.TypeR;
 import com.github.ManoloCosano72.model.interfaces.DAO;
 
 import java.io.IOException;
@@ -11,37 +12,44 @@ import java.sql.SQLException;
 
 
 public class RoomDAO implements DAO<Room, String> {
-    private final static String FINDBYDNI = "";
+    private final static String FINDBYCODROOM = "SELECT r.codRoom FROM Room AS r WHERE r.codRoom=? ";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
     private final static String UPDATE = "UPDATE Room SET Beds=? ,Windows=?,TypeR=?, Price=? WHERE CodRoom=?";
-    private final static String INSERT = "INSERT INTO Room (CodRoom,Beds, Windows,TypeR,Price,CodHotel) VALUES (?,?,?,?,?,?)";
+    private final static String INSERT = "INSERT INTO Room (Beds, Windows,TypeR,Price) VALUES (?,?,?,?)";
+
+    //private final static 📳📳📳📳📳;
 
     private Connection conn;
 
-    public RoomDAO() {
-        conn = ConnectionMariaDB.getConnection();
-    }
+
 
     @Override
     public Room save(Room entity) {
         Room result = entity;
         if (entity != null) {
-            String codRoom = entity.getCodRoom();
-            if (codRoom != null) {
-                Room isInDataBase = findByDni(codRoom);
+            int codRoom = entity.getCodRoom();
+            if (codRoom != 0) {
+                Room isInDataBase = findByCodRoom(codRoom);
                 if (isInDataBase == null) {
                     try (PreparedStatement pst = conn.prepareStatement(INSERT)) {
-                        pst.setString(1, entity.getCodRoom());
-                        pst.setInt(2, entity.getBeds());
-                        pst.setInt(3, entity.getWindows());
-                        pst.setString(4, String.valueOf(entity.getTypeR()));
-                        pst.setFloat(5,entity.getPrice());
-                        pst.setString(6, String.valueOf(entity.getCodHotel()));
+                        pst.setInt(1, entity.getBeds());
+                        pst.setInt(2, entity.getWindows());
+                        pst.setString(3, String.valueOf(entity.getTypeR()));
+                        pst.setInt(4, (int) entity.getPrice());
                         pst.executeUpdate();
                     } catch (SQLException e) {
                         e.printStackTrace();
+                    } if (entity.getCodRoom() != 0){
+                        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
+                            pst.setInt(1, entity.getBeds());
+                            pst.setInt(2, entity.getWindows());
+                            pst.setString(3, String.valueOf(entity.getTypeR()));
+                            pst.setInt(4, (int) entity.getPrice());
+                            pst.executeUpdate();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
                     }
-
                 }
             }
         }
@@ -50,16 +58,19 @@ public class RoomDAO implements DAO<Room, String> {
 
     @Override
     public Room delete(Room entity) throws SQLException {
-        if (entity == null || entity.getCodRoom() == null) return entity;
-        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
-            pst.setString(1,entity.getCodRoom());
+        if (entity == null || entity.getCodRoom() == 0) return entity;
+        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
+            //pst.setString(1,entity.getCodRoom());
             pst.executeUpdate();
         }
         return entity;
     }
 
-    @Override
-    public Room findByDni(String key) {
+    public Room findByCodRoom(int cR) {
+        return null;
+    }
+
+    public Room update(Room entity) {
         return null;
     }
 

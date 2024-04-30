@@ -5,30 +5,29 @@ import com.github.ManoloCosano72.model.entity.enums.TypeR;
 import java.util.Objects;
 
 public class Room {
-    private String codRoom;
+    private int codRoom;
     private int beds;
     private int windows;
     private float price;
     private TypeR typeR;
-    private Hotel codHotel;
 
-    public Room(String codRoom, int beds, int windows, float price, TypeR typeR, Hotel codHotel) {
+    public Room(int codRoom, int beds, int windows, float price, TypeR typeR) {
         this.codRoom = codRoom;
         this.beds = beds;
         this.windows = windows;
         this.price = price;
-        this.typeR = typeR;
-        this.codHotel = codHotel;
+        this.typeR= typeR;
     }
 
     public Room() {
     }
 
-    public String getCodRoom() {
+
+    public int getCodRoom() {
         return codRoom;
     }
 
-    public void setCodRoom(String codRoom) {
+    public void setCodRoom(int codRoom) {
         this.codRoom = codRoom;
     }
 
@@ -64,13 +63,6 @@ public class Room {
         this.typeR = typeR;
     }
 
-    public Hotel getCodHotel() {
-        return codHotel;
-    }
-
-    public void setCodHotel(Hotel codHotel) {
-        this.codHotel = codHotel;
-    }
 
     @Override
     public boolean equals(Object obj) {
@@ -88,7 +80,7 @@ public class Room {
 
     @Override
     public int hashCode() {
-        return Objects.hash(codRoom, beds, windows, price);
+        return Objects.hash(codRoom, beds, windows,typeR,price);
     }
 
     @Override
@@ -97,9 +89,8 @@ public class Room {
                 "codRoom=  " + codRoom +
                 ", bed = " + beds +
                 ", windows = " + windows +
-                ", price = " + price +
                 ", typeR ="  + typeR +
-                ", codHotel = " + codHotel +
+                ", price = " + price +
                 ']';
     }
 }

@@ -6,5 +6,4 @@ import java.sql.SQLException;
 public interface DAO<T, K> extends Closeable {
     T save(T entity);
     T delete(T entity) throws SQLException;
-    T findByDni(K key);
 }
