@@ -3,15 +3,15 @@ package com.github.ManoloCosano72.model.entity;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class Reserve {
-    private String codReserve;
+    private int codReserve;
     private Date date;
-    private String codRoom;
+    private Room codRoom;
     private List<Client> clients;
 
-    public Reserve(String codReserve, Date date, String codRoom, List<Client> clients) {
-        this.codReserve = codReserve;
+    public Reserve(Date date, Room codRoom, List<Client> clients) {
         this.date = date;
         this.codRoom = codRoom;
         this.clients = clients;
@@ -20,11 +20,11 @@ public class Reserve {
     public Reserve() {
     }
 
-    public String getCodReserve() {
+    public int getCodReserve() {
         return codReserve;
     }
 
-    public void setCodReserve(String codReserve) {
+    public void setCodReserve(int codReserve) {
         this.codReserve = codReserve;
     }
 
@@ -36,11 +36,11 @@ public class Reserve {
         this.date = date;
     }
 
-    public String getCodRoom() {
+    public Room getCodRoom() {
         return codRoom;
     }
 
-    public void setCodRoom(String codRoom) {
+    public void setCodRoom(Room codRoom) {
         this.codRoom = codRoom;
     }
 
@@ -69,7 +69,7 @@ public class Reserve {
 
     @Override
     public int hashCode() {
-        return Objects.hash(codReserve);
+        return Objects.hash(codReserve,date,codRoom, clients);
     }
 
     @Override

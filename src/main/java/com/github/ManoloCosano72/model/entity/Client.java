@@ -3,15 +3,14 @@ package com.github.ManoloCosano72.model.entity;
 import java.util.Objects;
 
 public class Client{
-    private String dni;
+    private int dni;
     private String name;
     private String surnames;
     private String phone;
     private String mail;
 
 
-    public Client(String dni, String name, String surnames, String phone, String mail) {
-        this.dni = dni;
+    public Client(String name, String surnames, String phone, String mail) {
         this.name = name;
         this.surnames = surnames;
         this.phone = phone;
@@ -23,11 +22,11 @@ public class Client{
     }
 
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
