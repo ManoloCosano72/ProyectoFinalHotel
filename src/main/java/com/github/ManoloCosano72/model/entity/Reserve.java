@@ -3,28 +3,34 @@ package com.github.ManoloCosano72.model.entity;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 public class Reserve {
-    private int codReserve;
+    private String codReserve;
     private Date date;
-    private Room codRoom;
+    private Room room;
     private List<Client> clients;
 
-    public Reserve(Date date, Room codRoom, List<Client> clients) {
+    public Reserve(String codReserve,Date date, Room codRoom, List<Client> clients) {
+        this.codReserve=codReserve;
         this.date = date;
-        this.codRoom = codRoom;
+        this.room = codRoom;
         this.clients = clients;
+    }
+
+    public Reserve(String codReserve, Date date, Room codRoom) {
+        this.codReserve = codReserve;
+        this.date = date;
+        this.room = codRoom;
     }
 
     public Reserve() {
     }
 
-    public int getCodReserve() {
+    public String getCodReserve() {
         return codReserve;
     }
 
-    public void setCodReserve(int codReserve) {
+    public void setCodReserve(String codReserve) {
         this.codReserve = codReserve;
     }
 
@@ -36,12 +42,12 @@ public class Reserve {
         this.date = date;
     }
 
-    public Room getCodRoom() {
-        return codRoom;
+    public Room getRoom() {
+        return room;
     }
 
-    public void setCodRoom(Room codRoom) {
-        this.codRoom = codRoom;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
     public List<Client> getClients() {
@@ -69,7 +75,7 @@ public class Reserve {
 
     @Override
     public int hashCode() {
-        return Objects.hash(codReserve,date,codRoom, clients);
+        return Objects.hash(codReserve,date, room, clients);
     }
 
     @Override
@@ -77,7 +83,7 @@ public class Reserve {
         return "Reserve[" +
                 "codReserve = " + codReserve +
                 ", date = " + date +
-                ", codRoom = " + codRoom +
+                ", codRoom = " + room +
                 ", clients = " + clients +
                 ']';
     }

@@ -5,29 +5,31 @@ import com.github.ManoloCosano72.model.entity.enums.TypeR;
 import java.util.Objects;
 
 public class Room {
-    private int codRoom;
+    private String codRoom;
     private int beds;
     private int windows;
-    private float price;
     private TypeR typeR;
+    private int price;
 
-    public Room(int codRoom, int beds, int windows, float price, TypeR typeR) {
+
+    public Room(String codRoom, int beds, int windows, TypeR typeR,int price) {
         this.codRoom = codRoom;
         this.beds = beds;
         this.windows = windows;
-        this.price = price;
         this.typeR= typeR;
+        this.price = price;
     }
+
 
     public Room() {
     }
 
 
-    public int getCodRoom() {
+    public String getCodRoom() {
         return codRoom;
     }
 
-    public void setCodRoom(int codRoom) {
+    public void setCodRoom(String codRoom) {
         this.codRoom = codRoom;
     }
 
@@ -46,15 +48,6 @@ public class Room {
     public void setWindows(int windows) {
         this.windows = windows;
     }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
     public TypeR getTypeR() {
         return typeR;
     }
@@ -62,6 +55,16 @@ public class Room {
     public void setTypeR(TypeR typeR) {
         this.typeR = typeR;
     }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+
 
 
     @Override
