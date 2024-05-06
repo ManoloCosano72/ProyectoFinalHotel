@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜€«¼ùÿÿÿÿ
+c
+java:S2095"HUse try-with-resources or close this "ReserveDAO" in a "finally" clause.(¸µ¸õûÿÿÿÿ
+B
+java:S1874",Remove this use of "Date"; it is deprecated.(ý•©«

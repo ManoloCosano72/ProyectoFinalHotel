@@ -13,16 +13,14 @@ public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYDNI = "SELECT Dni FROM Client WHERE Dni =?";
     private final static String FINDBYNAME = "SELECT Name FROM Client WHERE Name=?";
     private final static String DELETE = "DELETE FROM Client WHERE Dni=?";
-    private final static String UPDATE = "UPDATE Client SET name=?, surnames=?, phone=?, mail=? WHERE Dni=? ";
-    private final static String INSERT = "INSERT INTO Client (Dni,Name,Surnames,Phone,Mail) VALUES (?,?,?,?,?)";
+    private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=?, Admin=?  WHERE Dni=? ";
+    private final static String INSERT = "INSERT INTO Client (Dni,Name,Surnames,Phone,Mail,Password,Admin) VALUES (?,?,?,?,?,?,?)";
 
     @Override
     public Client save(Client entity) {
-        Client result = entity;
-        if (entity == null) return result;
         if (entity != null) {
             String Dni = entity.getDni();
-            if (Dni !=null) {
+            if (Dni != null) {
                 Client isInDataBase = findByDni(Dni);
                 if (isInDataBase != null) {
                     try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(INSERT)) {
@@ -31,6 +29,8 @@ public class ClientDAO implements DAO<Client, String> {
                         pst.setString(3, entity.getSurnames());
                         pst.setString(4, entity.getPhone());
                         pst.setString(5, entity.getMail());
+                        pst.setString(6, entity.getPassword());
+                        pst.setInt(7, entity.getAdmin());
                         pst.executeUpdate();
                     } catch (SQLException e) {
                         e.printStackTrace();
@@ -38,16 +38,16 @@ public class ClientDAO implements DAO<Client, String> {
                 }
             }
         }
-        return result;
+        return entity;
     }
 
     @Override
     public Client delete(Client entity) throws SQLException {
-        Client result = entity;
-        if (entity == null || entity.getDni() == null) return result;
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
-            pst.setString(1, entity.getDni());
-            pst.executeUpdate();
+        if (entity != null) {
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
+                pst.setString(1, entity.getDni());
+                pst.executeUpdate();
+            }
         }
         return entity;
     }
@@ -83,14 +83,17 @@ public class ClientDAO implements DAO<Client, String> {
         }
         return result;
     }
-    public Client update(Client entity){
+
+    public Client update(Client entity) {
         Client result = entity;
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
             pst.setString(1, entity.getName());
             pst.setString(2, entity.getSurnames());
             pst.setString(3, entity.getPhone());
             pst.setString(4, entity.getMail());
-            pst.setString(5, entity.getDni());
+            pst.setString(5, entity.getPassword());
+            pst.setInt(6,entity.getAdmin());
+            pst.setString(7, entity.getDni());
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

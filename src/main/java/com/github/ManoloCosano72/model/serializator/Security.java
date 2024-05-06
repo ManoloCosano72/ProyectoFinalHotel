@@ -1,4 +1,4 @@
-package com.github.ManoloCosano72.model.session;
+package com.github.ManoloCosano72.model.serializator;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

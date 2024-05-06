@@ -1,0 +1,22 @@
+
+f
+java:S1192W"KDefine a constant instead of duplicating this literal "CodReserve" 3 times.(áˆÅöıÿÿÿÿ
+J
+java:S10665"/Merge this if statement with the enclosing one.(øıÌËÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“Ëé²şÿÿÿÿ
+
+java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‡îÓÀ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Áâì
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(²œßÊ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ğ¼˜ùøÿÿÿÿ
+Z
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÂÈ`
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ò®ş¡
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ğĞ‹ùÿÿÿÿ
