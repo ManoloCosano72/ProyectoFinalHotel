@@ -1,0 +1,14 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾ä„
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ŒÚ²
+Y
+java:S1854
+"CRemove this useless assignment to local variable "passwordMatcher".(¾£á
+J
+java:S1481
+"4Remove this unused "passwordMatcher" local variable.(¾£á
+Z
+java:S1854"?Remove this useless assignment to local variable "mailMatcher".(Ï°§úÿÿÿÿ
+K
+java:S1481"0Remove this unused "mailMatcher" local variable.(Ï°§úÿÿÿÿ

@@ -14,7 +14,8 @@ public class InsertRoom {
         r.setTypeR(TypeR.SUITE);
         r.setPrice(1200);
         RoomDAO roDAO = new RoomDAO();
-        roDAO.update(r);
+        roDAO.findByType(r);
+        System.out.println(r);
     }
 
 }
