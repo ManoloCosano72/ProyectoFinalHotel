@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf82455-6b55-4507-9a65-001cfa575107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertListClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a6b165ed2de9f0e64a3119c98e0e74c43fa86a1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a6b165ed2de9f0e64a3119c98e0e74c43fa86a1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/948db7a723cb7451470be0a47afd377baa9dc74b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c502c66180c12e1aa08970b2ad226753b8c27e9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa02e71517702cf738b48362c7ff2d48a35830c0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa02e71517702cf738b48362c7ff2d48a35830c0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/4/948db7a723cb7451470be0a47afd377baa9dc74b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/5/c502c66180c12e1aa08970b2ad226753b8c27e9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/ClientUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/enums/Rank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/serializator/Security.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertListClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertListClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertReserve.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,39 +51,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.InsertClient.executor": "Run",
-    "Application.InsertReserve.executor": "Run",
-    "Application.InsertRoom.executor": "Run",
-    "Application.LoadConnection.executor": "Run",
-    "Application.SaveConnection.executor": "Run",
-    "Application.loadConnection.executor": "Run",
-    "Application.saveConnection.executor": "Run",
-    "Application.testDelete1.executor": "Run",
-    "Application.testInsert1.executor": "Run",
-    "Application.testInsert2.executor": "Run",
-    "Application.testInsert3.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "model",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsertClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsertReserve.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsertRoom.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoadConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SaveConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.loadConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.saveConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testDelete1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testInsert1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testInsert2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testInsert3.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;model&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.ManoloCosano72.model.connection" />
@@ -136,7 +134,11 @@
       <workItem from="1714979525062" duration="4758000" />
       <workItem from="1714985574387" duration="506000" />
       <workItem from="1714986089341" duration="691000" />
-      <workItem from="1715009291791" duration="5247000" />
+      <workItem from="1715009291791" duration="11437000" />
+      <workItem from="1715025492491" duration="69000" />
+      <workItem from="1715065031715" duration="206000" />
+      <workItem from="1715065252513" duration="1828000" />
+      <workItem from="1715067097021" duration="3431000" />
     </task>
     <servers />
   </component>

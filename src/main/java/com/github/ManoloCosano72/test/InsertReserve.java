@@ -9,7 +9,7 @@ import java.sql.Date;
 
 public class InsertReserve {
     public static void main(String[] args) {
-        Date date = new Date(3000,12,3);
+        Date date = new Date(1200,12,3);
         Room room = new Room();
         room.setCodRoom("12345");
         Reserve r = new Reserve("333MN",date,room);

@@ -94,7 +94,7 @@ public class ReserveDAO implements DAO<Reserve, String> {
     }
 
 
-    public Reserve findByCodRoom(String codRo) {
+    public Reserve findByRoom(String codRo) {
         Reserve result = new Reserve();
         if (codRo == null) return result;
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYROOM)) {
