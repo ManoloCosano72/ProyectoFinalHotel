@@ -1,0 +1,15 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜€«¼ùÿÿÿÿ8±®ìŽõ1
+X	java:S125"<This block of commented-out lines of code should be removed.(‰‡¬×8»®ìŽõ1
+m
+java:S1128"KRemove this unused import 'com.github.ManoloCosano72.model.dao.ReserveDAO'.(ÍŠ™„ûÿÿÿÿ8½®ìŽõ1
+l
+java:S1128"JRemove this unused import 'com.github.ManoloCosano72.model.entity.Client'.(ËÑæ’ûÿÿÿÿ8¾®ìŽõ1
+g
+java:S1128"KRemove this unused import 'com.github.ManoloCosano72.model.entity.Reserve'.(³ÛÝ*8¾®ìŽõ1
+G
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê8¿®ìŽõ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8À®ìŽõ1
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Á®ìŽõ1
