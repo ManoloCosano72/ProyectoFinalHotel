@@ -2,22 +2,24 @@ package com.github.ManoloCosano72.view;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AppController extends Controller implements Initializable {
+public class MainController extends Controller implements Initializable {
     @FXML
-    private BorderPane borderPane;
-    private Controller centerController;
-
+    private ImageView logotype;
+    @FXML
+    private Button buttonLogin;
+    @FXML
+    private Button buttonRegistrer;
+    @FXML
+    private Button exit;
     @Override
     public void onOpen(Object input) throws IOException {
-
-    }
-    public void changeScene(Scenes scene,Object data) throws IOException {
 
     }
 
