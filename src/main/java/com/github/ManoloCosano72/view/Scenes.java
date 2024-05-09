@@ -1,7 +1,7 @@
 package com.github.ManoloCosano72.view;
 
 public enum Scenes {
-    ROOT("");
+    MAIN("view/main.fxml");
     private String url;
     Scenes(String url){
         this.url=url;

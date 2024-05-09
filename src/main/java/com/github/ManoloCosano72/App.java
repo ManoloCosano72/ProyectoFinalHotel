@@ -1,6 +1,8 @@
 package com.github.ManoloCosano72;
 
 import com.github.ManoloCosano72.view.AppController;
+import com.github.ManoloCosano72.view.Scenes;
+import com.github.ManoloCosano72.view.View;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

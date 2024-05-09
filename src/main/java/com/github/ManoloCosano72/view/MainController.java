@@ -10,14 +10,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController extends Controller implements Initializable {
-    @FXML
-    private ImageView logotype;
-    @FXML
-    private Button buttonLogin;
-    @FXML
-    private Button buttonRegistrer;
-    @FXML
-    private Button exit;
     @Override
     public void onOpen(Object input) throws IOException {
 
