@@ -5,18 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf82455-6b55-4507-9a65-001cfa575107" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a6b165ed2de9f0e64a3119c98e0e74c43fa86a1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a6b165ed2de9f0e64a3119c98e0e74c43fa86a1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/948db7a723cb7451470be0a47afd377baa9dc74b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c502c66180c12e1aa08970b2ad226753b8c27e9f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa02e71517702cf738b48362c7ff2d48a35830c0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa02e71517702cf738b48362c7ff2d48a35830c0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AdminMenuOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ClientMenuOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateReserveFromClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteReservesFromClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindAllRoooms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindRoomByCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/RegistrerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ShowReservesFromClientByCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateReserveFromClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/showAllReservesFromClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/adminMenuOptions.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/clientMenuOptions.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/createReserveFromClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/createRoom.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteReservesFromClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteRoom.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/findAllRoooms.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/findRoomByCode.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/registrer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/return.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/showAllReservesFromClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/showReservesFromClientByCode.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateDataFromAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateDataFromClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateReserveFromClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateRoom.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/4/948db7a723cb7451470be0a47afd377baa9dc74b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/5/c502c66180c12e1aa08970b2ad226753b8c27e9f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertListClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertListClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertReserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/PrimaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AppController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,15 +63,16 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="view" />
+        <entry key="$PROJECT_DIR$" value="model" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,44 +86,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.InsertClient.executor&quot;: &quot;Run&quot;,
-    &quot;Application.InsertReserve.executor&quot;: &quot;Run&quot;,
-    &quot;Application.InsertRoom.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoadConnection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SaveConnection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.loadConnection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.saveConnection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.testDelete1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.testInsert1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.testInsert2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.testInsert3.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;model&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.InsertClient.executor": "Run",
+    "Application.InsertReserve.executor": "Run",
+    "Application.InsertRoom.executor": "Run",
+    "Application.LoadConnection.executor": "Run",
+    "Application.SaveConnection.executor": "Run",
+    "Application.loadConnection.executor": "Run",
+    "Application.saveConnection.executor": "Run",
+    "Application.testDelete1.executor": "Run",
+    "Application.testInsert1.executor": "Run",
+    "Application.testInsert2.executor": "Run",
+    "Application.testInsert3.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "view",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/java/com/github/ManoloCosano72/view",
+    "last_opened_file_path": "C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/resources/com/github/ManoloCosano72.view",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.ManoloCosano72.model.connection" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\resources\com\github\ManoloCosano72.view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\resources\com\github\ManoloCosano72.view" />
       <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\java\com\github\ManoloCosano72\model\dao" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -139,6 +180,9 @@
       <workItem from="1715065031715" duration="206000" />
       <workItem from="1715065252513" duration="1828000" />
       <workItem from="1715067097021" duration="3431000" />
+      <workItem from="1715096177028" duration="1526000" />
+      <workItem from="1715150069254" duration="39000" />
+      <workItem from="1715150116094" duration="18581000" />
     </task>
     <servers />
   </component>
