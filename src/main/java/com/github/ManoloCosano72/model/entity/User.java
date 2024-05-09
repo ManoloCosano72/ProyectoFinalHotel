@@ -1,6 +1,8 @@
 package com.github.ManoloCosano72.model.entity;
 
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class User {
     private String dni;
@@ -96,6 +98,29 @@ public class User {
             return Objects.equals(dni, user.dni)&& Objects.equals(mail, user.mail);
         }
         return isEquals;
+    }
+    public static boolean validatePassword(String password) {
+        boolean result;
+        Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%*?&])[A-Za-z\\d@$!.#_()%*?&]{8,}$");
+        Matcher passwordMatcher = passwordPattern.matcher(password);
+        if(passwordMatcher.matches()){
+            result = true;
+        }else{
+            result= false;
+        }
+        return result;
+    }
+
+    public static boolean validateMail(String mail) {
+        boolean result;
+        Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
+        Matcher mailMatcher = mailPattern.matcher(mail);
+        if(mailMatcher.matches()){
+            result = true;
+        }else{
+            result= false;
+        }
+        return result;
     }
 
     @Override

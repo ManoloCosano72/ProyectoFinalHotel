@@ -8,10 +8,13 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYDNI = "SELECT Dni FROM Client WHERE Dni =?";
     private final static String FINDBYNAME = "SELECT Name FROM Client WHERE Name=?";
+    private final static String FINDALL = "SELECT Dni, Name, Surnames, Phone,Mail,Password,Admin FROM Client";
     private final static String DELETE = "DELETE FROM Client WHERE Dni=?";
     private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=?, Admin=?  WHERE Dni=? ";
     private final static String INSERT = "INSERT INTO Client (Dni,Name,Surnames,Phone,Mail,Password,Admin) VALUES (?,?,?,?,?,?,?)";
@@ -96,6 +99,24 @@ public class ClientDAO implements DAO<Client, String> {
             pst.setString(7, entity.getDni());
             pst.executeUpdate();
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    private List<Client> findAll(){
+        List<Client> result = new ArrayList<>();
+        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
+            ResultSet res = pst.executeQuery();
+            while (res.next()){
+                Client c = new Client();
+                c.setDni(res.getString("Dni"));
+                c.setName(res.getString("Name"));
+                c.setSurnames(res.getString("Surnames"));
+                c.setPhone(res.getString("Phone"));
+                c.setMail(res.getString("Mail"));
+                c.setAdmin(res.getInt("Admin"));
+            }
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return result;

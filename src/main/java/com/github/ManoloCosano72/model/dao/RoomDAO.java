@@ -9,11 +9,14 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class RoomDAO implements DAO<Room, String> {
     private final static String FINDBYCODROOM = "SELECT r.codRoom FROM Room AS r WHERE r.codRoom=? ";
     private final static String FINDBYTYPE= "SELECT TypeR FROM Room WHERE typeR=?";
+    private final static String FINDALL="SELECT codRoom, Beds, Windows, TypeR, Price FROM Room";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
     private final static String UPDATE = "UPDATE Room SET Beds=? ,Windows=?,TypeR=?, Price=? WHERE CodRoom=?";
     private final static String INSERT = "INSERT INTO Room (codRoom,Beds, Windows,TypeR,Price) VALUES (?,?,?,?,?)";
@@ -80,6 +83,23 @@ public class RoomDAO implements DAO<Room, String> {
                 result.setTypeR(typeR1);
             }
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    private List<Room> findAll(){
+        List<Room> result = new ArrayList<>();
+        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
+            ResultSet res = pst.executeQuery();
+            while (res.next()){
+                Room r = new Room();
+                r.setCodRoom(res.getString("CodRoom"));
+                r.setBeds(res.getInt("Beds"));
+                r.setWindows(res.getInt("Windows"));
+                r.setTypeR(TypeR.valueOf(res.getString("TypeR")));
+                r.setPrice(res.getInt("Price"));
+            }
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return result;

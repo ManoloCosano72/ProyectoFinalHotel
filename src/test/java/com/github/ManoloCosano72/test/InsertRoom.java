@@ -4,18 +4,19 @@ import com.github.ManoloCosano72.model.dao.RoomDAO;
 import com.github.ManoloCosano72.model.entity.Room;
 import com.github.ManoloCosano72.model.entity.enums.TypeR;
 
+import java.sql.SQLException;
+
 
 public class InsertRoom {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Room r = new Room();
-        r.setCodRoom("12345");
-        r.setBeds(8);
-        r.setWindows(5);
-        r.setTypeR(TypeR.SUITE);
-        r.setPrice(1200);
+        r.setCodRoom("AAA11");
+        r.setBeds(4);
+        r.setWindows(6);
+        r.setTypeR(TypeR.BIGGER);
+        r.setPrice(800);
         RoomDAO roDAO = new RoomDAO();
-        roDAO.findByType(r);
-        System.out.println(r);
+        roDAO.save(r);
     }
 
 }
