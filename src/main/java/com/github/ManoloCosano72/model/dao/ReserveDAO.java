@@ -19,6 +19,7 @@ public class ReserveDAO implements DAO<Reserve, String> {
     private final static String FINDBYCODRESERVE = "SELECT r.codReserve FROM Reserve AS r WHERE r.codReserve=?";
     private final static String FINDBYROOM = "SELECT r.codRoom FROM Reserve AS r WHERE r.codRoom=?";
     private final static String FINDRESERVESBYCLIENT = "SELECT Dni, CodReserve FROM Reserve WHERE Dni=?";
+    private final static String FINDALL= "SELECT Dni, codReserve FROM Dor WHERE Dni=?";
     private final static String DELETE = "DELETE FROM Reserve WHERE CodReserve=? ";
     private final static String UPDATE = "UPDATE Reserve SET date=?, codRoom=? WHERE codReserve=?";
     private final static String INSERT = "INSERT INTO Reserve (codReserve,Date,CodRoom) VALUES (?,?,?)";
