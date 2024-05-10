@@ -16,7 +16,7 @@ public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYNAME = "SELECT Name FROM Client WHERE Name=?";
     private final static String FINDALL = "SELECT Dni, Name, Surnames, Phone,Mail,Password,Admin FROM Client";
     private final static String DELETE = "DELETE FROM Client WHERE Dni=?";
-    private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=?, Admin=?  WHERE Dni=? ";
+    private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=? WHERE Dni=? ";
     private final static String INSERT = "INSERT INTO Client (Dni,Name,Surnames,Phone,Mail,Password,Admin) VALUES (?,?,?,?,?,?,?)";
 
     @Override
@@ -63,6 +63,7 @@ public class ClientDAO implements DAO<Client, String> {
             ResultSet res = pst.executeQuery();
             if (res.next()) {
                 result.setDni(res.getString("Dni"));
+                result.setName(res.getString("Name"));
             }
             res.close();
         } catch (SQLException e) {
@@ -79,6 +80,8 @@ public class ClientDAO implements DAO<Client, String> {
             ResultSet res = pst.executeQuery();
             if (res.next()) {
                 result.setName(res.getString("Name"));
+                result.setSurnames(res.getString("Surnames"));
+                result.setMail(res.getString("Mail"));
             }
             res.close();
         } catch (SQLException e) {
@@ -95,8 +98,7 @@ public class ClientDAO implements DAO<Client, String> {
             pst.setString(3, entity.getPhone());
             pst.setString(4, entity.getMail());
             pst.setString(5, entity.getPassword());
-            pst.setInt(6,entity.getAdmin());
-            pst.setString(7, entity.getDni());
+            pst.setString(6, entity.getDni());
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

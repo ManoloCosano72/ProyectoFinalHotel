@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf82455-6b55-4507-9a65-001cfa575107" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertClientsReserveList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertReserveClientList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Validation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertListClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertListClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/InsertRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/LoadConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/LoadConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/test/SaveConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/SaveConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/ManoloCosano72/test/InsertListClient.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +23,8 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>

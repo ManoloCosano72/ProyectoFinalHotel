@@ -15,7 +15,6 @@ import java.util.List;
 
 public class RoomDAO implements DAO<Room, String> {
     private final static String FINDBYCODROOM = "SELECT r.codRoom FROM Room AS r WHERE r.codRoom=? ";
-    private final static String FINDBYTYPE= "SELECT TypeR FROM Room WHERE typeR=?";
     private final static String FINDALL="SELECT codRoom, Beds, Windows, TypeR, Price FROM Room";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
     private final static String UPDATE = "UPDATE Room SET Beds=? ,Windows=?,TypeR=?, Price=? WHERE CodRoom=?";
@@ -71,22 +70,7 @@ public class RoomDAO implements DAO<Room, String> {
         }
         return result;
     }
-    public Room findByType(Room typeR){
-        Room result = new Room();
-        if (typeR == null) return result;
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYTYPE)) {
-            pst.setString(1, typeR.getTypeR().name());
-            ResultSet res = pst.executeQuery();
-            if (res.next()) {
-                String string = res.getString("TypeR");
-                TypeR typeR1 = TypeR.valueOf(string.toUpperCase());
-                result.setTypeR(typeR1);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
+
     private List<Room> findAll(){
         List<Room> result = new ArrayList<>();
         try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
