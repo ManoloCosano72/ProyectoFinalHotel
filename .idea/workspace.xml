@@ -5,52 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf82455-6b55-4507-9a65-001cfa575107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AdminMenuOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ClientMenuOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateReserveFromClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteReservesFromClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindAllRoooms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindRoomByCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/RegistrerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ShowReservesFromClientByCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateReserveFromClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/showAllReservesFromClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/adminMenuOptions.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/clientMenuOptions.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/createReserveFromClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/createRoom.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteReservesFromClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteRoom.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/findAllRoooms.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/findRoomByCode.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/logo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/registrer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/return.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/showAllReservesFromClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/showReservesFromClientByCode.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateDataFromAdmin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateDataFromClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateReserveFromClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateRoom.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindClients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindClientsByDni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindClientsByName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findClients.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findClientsByDni.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findClientsByName.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/layout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/session/Validation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AdminMenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AdminMenuOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ClientMenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ClientMenuOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateRooms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteClients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindAllRoooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindAllRooms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindRoomByCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindRoomByCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/RegistrerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/RegistrerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/Scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/Scenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ShowReservesFromClientByCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindReservesFromClientByCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/showAllReservesFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/FindAllReservesFromClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/adminMenuOptions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/adminMenuOptions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/clientMenuOptions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/clientMenuOptions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/createReserveFromClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/createReserveFromClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/createRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/createRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/deleteClients.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteReservesFromClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/deleteReservesFromClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/deleteRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/deleteRoom.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/exit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/findAllRoooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findAllRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/findRoomByCode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findRoomByCode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/logo.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/registrer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/registrer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/return.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/return.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/showAllReservesFromClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findAllReservesFromClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/showReservesFromClientByCode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findReservesFromClientByCode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateDataFromAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/updateDataFromAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateDataFromClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/updateDataFromClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateReserveFromClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/updateReserveFromClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72.view/updateRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/updateRoom.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +74,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -105,7 +115,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "view",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/java/com/github/ManoloCosano72/view",
     "last_opened_file_path": "C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/resources/com/github/ManoloCosano72.view",
@@ -129,6 +139,7 @@
       <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\resources\com\github\ManoloCosano72.view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\resources\com\github\ManoloCosano72\view" />
       <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\resources\com\github\ManoloCosano72.view" />
       <recent name="C:\Users\Manuel\IdeaProjects\ProyectoHotel\src\main\java\com\github\ManoloCosano72\model\dao" />
     </key>
@@ -183,6 +194,21 @@
       <workItem from="1715096177028" duration="1526000" />
       <workItem from="1715150069254" duration="39000" />
       <workItem from="1715150116094" duration="18581000" />
+      <workItem from="1715365344689" duration="1659000" />
+      <workItem from="1715425409531" duration="3880000" />
+      <workItem from="1715582910031" duration="491000" />
+      <workItem from="1715583507686" duration="44000" />
+      <workItem from="1715586303371" duration="3264000" />
+      <workItem from="1715600366033" duration="69000" />
+      <workItem from="1715601150543" duration="39000" />
+      <workItem from="1715601269869" duration="732000" />
+      <workItem from="1715616766768" duration="4711000" />
+      <workItem from="1715622234242" duration="9234000" />
+      <workItem from="1715668749651" duration="9000" />
+      <workItem from="1715671466815" duration="11370000" />
+      <workItem from="1715703401412" duration="855000" />
+      <workItem from="1715754973923" duration="15707000" />
+      <workItem from="1715788809804" duration="9089000" />
     </task>
     <servers />
   </component>
@@ -203,6 +229,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
           <option name="timeStamp" value="4" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="7" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

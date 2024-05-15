@@ -22,4 +22,9 @@ public class Client extends User{
     public void setReserves(List<Reserve> reserves) {
         this.reserves = reserves;
     }
+
+
+    public int getAdmin() {
+        return admin;
+    }
 }

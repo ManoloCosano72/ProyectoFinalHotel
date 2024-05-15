@@ -13,8 +13,9 @@ import java.util.List;
 
 public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYDNI = "SELECT Dni FROM Client WHERE Dni =?";
+    private final static String FINDBYMAIL = "SELECT Dni,Mail,Password FROM Client WHERE Mail =?";
     private final static String FINDBYNAME = "SELECT Name FROM Client WHERE Name=?";
-    private final static String FINDALL = "SELECT Dni, Name, Surnames, Phone,Mail,Password,Admin FROM Client";
+    private final static String FINDALL = "SELECT Dni, Name, Surnames, Phone,Mail,Admin FROM Client";
     private final static String DELETE = "DELETE FROM Client WHERE Dni=?";
     private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=?, Admin=?  WHERE Dni=? ";
     private final static String INSERT = "INSERT INTO Client (Dni,Name,Surnames,Phone,Mail,Password,Admin) VALUES (?,?,?,?,?,?,?)";
@@ -63,6 +64,7 @@ public class ClientDAO implements DAO<Client, String> {
             ResultSet res = pst.executeQuery();
             if (res.next()) {
                 result.setDni(res.getString("Dni"));
+                result.setName(res.getString("Name"));
             }
             res.close();
         } catch (SQLException e) {
@@ -70,6 +72,22 @@ public class ClientDAO implements DAO<Client, String> {
         }
         return result;
     }
+    public Client findByMail(String mail) {
+        Client result = new Client();
+        if (mail == null) return null;
+        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYMAIL)) {
+            pst.setString(1, mail);
+            ResultSet res = pst.executeQuery();
+            if (res.next()) {
+                result.setMail(res.getString("Mail"));
+            }
+            res.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
 
     public Client findByName(String name) {
         Client result = new Client();
@@ -79,6 +97,7 @@ public class ClientDAO implements DAO<Client, String> {
             ResultSet res = pst.executeQuery();
             if (res.next()) {
                 result.setName(res.getString("Name"));
+                result.setSurnames(res.getString("Surnames"));
             }
             res.close();
         } catch (SQLException e) {
@@ -120,6 +139,10 @@ public class ClientDAO implements DAO<Client, String> {
             e.printStackTrace();
         }
         return result;
+    }
+
+    public static ClientDAO build(){
+        return new ClientDAO();
     }
 
     @Override

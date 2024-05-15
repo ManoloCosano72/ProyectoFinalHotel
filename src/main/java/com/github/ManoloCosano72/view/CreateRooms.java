@@ -12,25 +12,23 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UpdateDataFromClient extends Controller implements Initializable {
+public class CreateRooms extends Controller implements Initializable {
     @FXML
     private VBox vBox;
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    private TextField fieldName;
+    private TextField fieldCodRoom;
     @FXML
-    private TextField fieldSurnames;
+    private TextField fieldBeds;
     @FXML
-    private TextField fieldPhone;
+    private TextField fieldWindows;
     @FXML
-    private TextField fieldMail;
+    private TextField fieldTypeR;
     @FXML
-    private TextField fieldPassword;
+    private TextField fieldPrice;
     @FXML
-    private Button updateButton;
-    @FXML
-    private ImageView returnButton;
+    private Button createButton;
     @Override
     public void onOpen(Object input) throws IOException {
 

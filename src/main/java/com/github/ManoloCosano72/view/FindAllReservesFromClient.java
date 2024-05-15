@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CreateRoom extends Controller implements Initializable {
+public class FindAllReservesFromClient extends Controller implements Initializable {
     @Override
     public void onOpen(Object input) throws IOException {
 

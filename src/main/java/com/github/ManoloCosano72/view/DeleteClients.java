@@ -1,12 +1,23 @@
 package com.github.ManoloCosano72.view;
 
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ShowReservesFromClientByCode extends Controller implements Initializable {
+public class DeleteClients extends Controller implements Initializable {
+    @FXML
+    private AnchorPane anchorPane;
+    @FXML
+    private TextField fieldDni;
+    @FXML
+    private Button deleteButton;
     @Override
     public void onOpen(Object input) throws IOException {
 

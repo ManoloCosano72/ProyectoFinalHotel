@@ -6,19 +6,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class FindRoomByCode extends Controller implements Initializable {
+public class FindClientsByDni extends Controller implements Initializable {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    private TextField fieldCodRoom;
+    private TextField fieldDni;
     @FXML
     private Button findButton;
     @Override
-    public void onOpen(Object input) throws IOException {
+    public void onOpen(Object input) throws Exception {
 
     }
 
