@@ -13,8 +13,9 @@ public class Session {
     private Session() {
 
     }
-    public static void LogIn(User user){
-        if(_instance ==null){
+
+    public static void LogIn(User user) {
+        if (_instance == null) {
             _instance = new Session(user);
         }
     }
@@ -31,10 +32,7 @@ public class Session {
         return user;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-    public static void LogOut(){
-        _instance=null;
+    public static void LogOut() {
+        _instance = null;
     }
 }

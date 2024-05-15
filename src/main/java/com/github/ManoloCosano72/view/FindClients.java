@@ -2,13 +2,12 @@ package com.github.ManoloCosano72.view;
 
 import javafx.fxml.Initializable;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class showAllReservesFromClient extends Controller implements Initializable {
+public class FindClients extends Controller implements Initializable {
     @Override
-    public void onOpen(Object input) throws IOException {
+    public void onOpen(Object input) throws Exception {
 
     }
 

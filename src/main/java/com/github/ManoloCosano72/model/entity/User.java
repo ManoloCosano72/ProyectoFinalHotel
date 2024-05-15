@@ -1,15 +1,20 @@
 package com.github.ManoloCosano72.model.entity;
 
+import com.github.ManoloCosano72.model.serializator.Security;
+
+import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class User {
-    private String dni;
-    private String name;
-    private String surnames;
-    private String phone;
-    private String mail;
-    private String password;
-    private int admin;
+    protected String dni;
+    protected String name;
+    protected String surnames;
+    protected String phone;
+    protected String mail;
+    protected String password;
+    protected int admin;
 
     public User(String dni, String name, String surnames, String phone, String mail, String password, int admin) {
         this.dni = dni;
@@ -17,7 +22,11 @@ public class User {
         this.surnames = surnames;
         this.phone = phone;
         this.mail = mail;
-        this.password = password;
+        try {
+            setPassword(password);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
         this.admin = admin;
     }
 
@@ -68,8 +77,8 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String password) throws NoSuchAlgorithmException {
+        this.password = Security.hashPassword(password);
     }
 
     public int getAdmin() {
@@ -81,6 +90,30 @@ public class User {
     }
     public int Admin(){
         return 1;
+    }
+
+    public static boolean validatePassword(String password) {
+        boolean result;
+        Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%*?&])[A-Za-z\\d@$!.#_()%*?&]{8,}$");
+        Matcher passwordMatcher = passwordPattern.matcher(password);
+        if(passwordMatcher.matches()){
+            result=true;
+        }else{
+            result=false;
+        }
+        return result;
+    }
+
+    public static boolean validateMail(String mail) {
+        boolean result;
+        Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
+        Matcher mailMatcher = mailPattern.matcher(mail);
+        if(mailMatcher.matches()){
+            result=true;
+        }else{
+            result=false;
+        }
+        return result;
     }
 
     @Override

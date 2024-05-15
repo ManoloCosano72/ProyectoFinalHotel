@@ -18,9 +18,10 @@ import static com.github.ManoloCosano72.model.dao.RoomDAO.build;
 public class ReserveDAO implements DAO<Reserve, String> {
     private final static String FINDBYCODRESERVE = "SELECT r.codReserve FROM Reserve AS r WHERE r.codReserve=?";
     private final static String FINDBYROOM = "SELECT r.codRoom FROM Reserve AS r WHERE r.codRoom=?";
-    private final static String FINDRESERVESBYCLIENT = "SELECT Dni, CodReserve FROM Reserve WHERE Dni=?";
+    private final static String FINDRESERVESBYCLIENT = "SELECT Dni, CodReserve FROM Dor WHERE Dni=?";
     private final static String FINDALL= "SELECT Dni, codReserve FROM Dor WHERE Dni=?";
     private final static String DELETE = "DELETE FROM Reserve WHERE CodReserve=? ";
+    private final static String DELETERESERVE = "DELETE FROM Dor WHERE CodReserve=?";
     private final static String UPDATE = "UPDATE Reserve SET date=?, codRoom=? WHERE codReserve=?";
     private final static String INSERT = "INSERT INTO Reserve (codReserve,Date,CodRoom) VALUES (?,?,?)";
     private final static String INSERTDOR = "INSERT INTO Dor (Dni,CodReserve) VALUES (?,?)";
@@ -76,6 +77,15 @@ public class ReserveDAO implements DAO<Reserve, String> {
         }
         return entity;
     }
+    public Reserve deleteReserveFromList(Reserve entity){
+        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETERESERVE)) {
+            pst.setString(1, entity.getCodReserve());
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return entity;
+    }
 
 
     public Reserve findByCodReserve(String codRe) {
@@ -111,6 +121,18 @@ public class ReserveDAO implements DAO<Reserve, String> {
             e.printStackTrace();
         }
         return result;
+    }
+    public List<Reserve> findAll(String Dni, String codReserve){
+        List<Reserve> reserves = new ArrayList<>();
+        if (Dni !=null && codReserve !=null){
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
+                pst.setString(1,Dni);
+                pst.setString(2,codReserve);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return reserves;
     }
 
     public List<Reserve> findByReservesByClient(String key) {

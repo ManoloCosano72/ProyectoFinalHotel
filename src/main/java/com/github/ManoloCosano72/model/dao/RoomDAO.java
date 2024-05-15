@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class RoomDAO implements DAO<Room, String> {
     private final static String FINDBYCODROOM = "SELECT r.codRoom FROM Room AS r WHERE r.codRoom=? ";
-    private final static String FINDBYTYPE= "SELECT TypeR FROM Room WHERE typeR=?";
+    private final static String FINDBYTYPE= "SELECT * FROM Room WHERE typeR IN (?,?,?)";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
     private final static String UPDATE = "UPDATE Room SET Beds=? ,Windows=?,TypeR=?, Price=? WHERE CodRoom=?";
     private final static String INSERT = "INSERT INTO Room (codRoom,Beds, Windows,TypeR,Price) VALUES (?,?,?,?,?)";
