@@ -1,10 +1,12 @@
 package com.github.ManoloCosano72.view;
 
 import com.github.ManoloCosano72.App;
+import com.github.ManoloCosano72.model.dao.ClientDAO;
 import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.entity.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -66,6 +68,7 @@ public class RegistrerController extends Controller implements Initializable {
     @FXML
     public void registerClient() throws Exception {
         Client client = new Client();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Registrado con exito");
         client.setDni(fieldDni.getText());
         client.setName(fieldName.getText());
         client.setSurnames(fieldSurnames.getText());
@@ -73,7 +76,8 @@ public class RegistrerController extends Controller implements Initializable {
         client.setMail(fieldMail.getText());
         client.setPassword(fieldPassword.getText());
         client.setAdmin(Integer.parseInt(fieldAdmin.getText()));
-        build().save(client);
+        ClientDAO.build().save(client);
+        alert.showAndWait();
         App.currentController.changeScene(Scenes.MAIN,null);
     }
 }

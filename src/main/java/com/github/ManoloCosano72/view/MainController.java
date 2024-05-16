@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,8 +13,6 @@ import java.util.ResourceBundle;
 
 
 public class MainController extends Controller implements Initializable {
-    @FXML
-    private BorderPane borderPane;
     @FXML
     private AnchorPane anchorPane;
     @FXML

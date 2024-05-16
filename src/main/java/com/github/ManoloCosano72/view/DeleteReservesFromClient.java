@@ -1,12 +1,25 @@
 package com.github.ManoloCosano72.view;
 
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DeleteReservesFromClient extends Controller implements Initializable {
+    @FXML
+    private VBox vBox;
+    @FXML
+    private AnchorPane anchorPane;
+    @FXML
+    private TextField fieldCodReserve;
+    @FXML
+    private Button deleteButton;
     @Override
     public void onOpen(Object input) throws IOException {
 

@@ -1,7 +1,11 @@
 package com.github.ManoloCosano72.view;
 
+import com.github.ManoloCosano72.App;
+import com.github.ManoloCosano72.model.dao.ClientDAO;
+import com.github.ManoloCosano72.model.entity.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -31,6 +35,7 @@ public class UpdateDataFromClient extends Controller implements Initializable {
     private Button updateButton;
     @FXML
     private ImageView returnButton;
+
     @Override
     public void onOpen(Object input) throws IOException {
 
@@ -45,4 +50,19 @@ public class UpdateDataFromClient extends Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    @FXML
+    public void updateData() throws Exception {
+        Client client = new Client();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Sus datos han sido actualizados con exito");
+        client.setDni(fieldName.getText());
+        client.setSurnames(fieldSurnames.getText());
+        client.setPhone(fieldPhone.getText());
+        client.setMail(fieldMail.getText());
+        client.setPassword(fieldPassword.getText());
+        ClientDAO.build().update(client);
+        alert.showAndWait();
+        App.currentController.changeScene(Scenes.ADMINMENUOPTIONS, null);
+    }
+
 }

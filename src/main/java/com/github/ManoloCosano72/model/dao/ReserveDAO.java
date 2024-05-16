@@ -115,7 +115,8 @@ public class ReserveDAO implements DAO<Reserve, String> {
                 result.setCodReserve(res.getString("CodReserve"));
                 result.setDate(res.getDate("Date"));
                 //Eager
-                result.setRoom(build().findByCodRoom((res.getString("Room"))));
+                RoomDAO rDAO = new RoomDAO();
+                result.setRoom(rDAO.findByCodRoom((res.getString("Room"))));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -169,5 +170,8 @@ public class ReserveDAO implements DAO<Reserve, String> {
     @Override
     public void close() throws IOException {
 
+    }
+    public static ReserveDAO build(){
+        return new ReserveDAO();
     }
 }

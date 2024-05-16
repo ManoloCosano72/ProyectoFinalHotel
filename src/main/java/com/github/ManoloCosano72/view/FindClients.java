@@ -8,7 +8,6 @@ import java.util.ResourceBundle;
 public class FindClients extends Controller implements Initializable {
     @Override
     public void onOpen(Object input) throws Exception {
-
     }
 
     @Override
@@ -20,4 +19,16 @@ public class FindClients extends Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    //@FXML
+    //public void findAllClients() throws Exception {
+    //    Client client = new Client();
+    //    client.setDni(fieldName.getText());
+    //    client.setSurnames(fieldSurnames.getText());
+    //    client.setPhone(fieldPhone.getText());
+    //    client.setMail(fieldMail.getText());
+    //    client.setPassword(fieldPassword.getText());
+    //    ClientDAO.build().findAll(client);
+    //    App.currentController.changeScene(Scenes.ADMINMENUOPTIONS, null);
+    //}
 }
