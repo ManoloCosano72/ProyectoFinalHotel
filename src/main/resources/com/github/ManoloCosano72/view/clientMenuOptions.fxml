@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="575.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ManoloCosano72.view.ClientMenuOptions">
+<AnchorPane fx:id="anchorPane" prefHeight="697.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ManoloCosano72.view.ClientMenuOptions">
    <children>
-      <Text layoutX="359.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPCIONES DE CLIENTE" wrappingWidth="212.13671875">
+      <Text layoutX="439.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPCIONES DE CLIENTE" wrappingWidth="212.13671875">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="261.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Aqui puedes escoger diversas opciones para hacer alguna actividad" wrappingWidth="377.13671875" />
-      <Button fx:id="findReservesByCode" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" text="BUSCAR RESERVAS POR CODIGO" />
-      <Button fx:id="findAllReserves" layoutX="237.0" layoutY="98.0" mnemonicParsing="false" text="LISTAR RESERVAS" />
-      <Button fx:id="deleteReserves" layoutX="380.0" layoutY="98.0" mnemonicParsing="false" text="BORRAR RESERVAS" />
-      <Button fx:id="updateReserve" layoutX="520.0" layoutY="98.0" mnemonicParsing="false" text="ACTUALIZAR RESERVA " />
-      <Button fx:id="updateData" layoutX="350.0" layoutY="161.0" mnemonicParsing="false" text="ACTUALIZAR DATOS PERSONALES" />
-      <Button fx:id="createReserve" layoutX="681.0" layoutY="98.0" mnemonicParsing="false" text="CREAR RESERVA" />
+      <Text layoutX="382.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Aqui puedes escoger diversas opciones para hacer alguna actividad" wrappingWidth="377.13671875" />
+      <Button fx:id="findAllReserves" layoutX="810.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToFindAllReserves" text="BUSCAR RESERVAS" />
+      <Button fx:id="deleteReserves" layoutX="286.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToDeleteReserves" text="BORRAR RESERVAS" />
+      <Button fx:id="updateReserve" layoutX="450.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateReserve" text="ACTUALIZAR RESERVA " />
+      <Button fx:id="updateData" layoutX="62.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateDataFromClient" text="ACTUALIZAR DATOS PERSONALES" />
+      <Button fx:id="createReserve" layoutX="656.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToCreateReserve" text="CREAR RESERVA" />
       <ImageView fx:id="closeSession" fitHeight="52.0" fitWidth="109.0" layoutX="849.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@exit.png" />
+            <Image url="@../../../../IconsImages/exit.png" />
          </image>
       </ImageView>
+      <TableView fx:id="tableViewReserve" layoutX="47.0" layoutY="166.0" prefHeight="474.0" prefWidth="996.0">
+         <columns>
+            <TableColumn fx:id="columnCodReserve" prefWidth="315.0" text="CODIGO RESERVA" />
+            <TableColumn fx:id="columnDate" minWidth="0.0" prefWidth="286.0" text="FECHA" />
+            <TableColumn fx:id="columnCodRoom" minWidth="0.0" prefWidth="386.0" text="CODIGO HABITACION" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -93,27 +93,27 @@ public class User {
     }
 
     public static boolean validatePassword(String password) {
-        boolean result;
+        boolean validateResult;
         Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%*?&])[A-Za-z\\d@$!.#_()%*?&]{8,}$");
         Matcher passwordMatcher = passwordPattern.matcher(password);
         if(passwordMatcher.matches()){
-            result=true;
+            validateResult=true;
         }else{
-            result=false;
+            validateResult=false;
         }
-        return result;
+        return validateResult;
     }
 
     public static boolean validateMail(String mail) {
-        boolean result;
+        boolean validateResult;
         Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
         Matcher mailMatcher = mailPattern.matcher(mail);
         if(mailMatcher.matches()){
-            result=true;
+            validateResult=true;
         }else{
-            result=false;
+            validateResult=false;
         }
-        return result;
+        return validateResult;
     }
 
     @Override

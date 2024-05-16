@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYDNI = "SELECT Dni FROM Client WHERE Dni =?";
@@ -105,8 +103,8 @@ public class ClientDAO implements DAO<Client, String> {
         }
         return result;
     }
-    private List<Client> findAll(){
-        List<Client> result = new ArrayList<>();
+    public Client findAll(){
+        Client result = new Client();
         try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
             ResultSet res = pst.executeQuery();
             while (res.next()){

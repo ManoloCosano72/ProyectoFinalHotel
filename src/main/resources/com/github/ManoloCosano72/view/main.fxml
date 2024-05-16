@@ -13,7 +13,7 @@
       <Button fx:id="registrerButton" layoutX="163.0" layoutY="311.0" mnemonicParsing="false" onAction="#goToRegistrer" prefHeight="52.0" prefWidth="101.0" style="-fx-background-color: white;" text="REGISTRARSE" />
       <ImageView fx:id="exitButton" fitHeight="52.0" fitWidth="109.0" layoutX="534.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@exit.png" />
+            <Image url="@../../../../IconsImages/exit.png" />
          </image>
       </ImageView>
       <Text layoutX="61.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDOS A BOOKING MANOLO" wrappingWidth="496.0">
@@ -23,7 +23,7 @@
       </Text>
       <ImageView fitHeight="219.0" fitWidth="256.0" layoutX="191.0" layoutY="71.0">
          <image>
-            <Image url="@logo.jpeg" />
+            <Image url="@../../../../IconsImages/logo.jpeg" />
          </image>
       </ImageView>
    </children>

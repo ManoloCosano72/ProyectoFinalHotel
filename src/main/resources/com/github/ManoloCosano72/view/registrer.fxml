@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ManoloCosano72.view.RegistrerController">
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ManoloCosano72.view.RegistrerController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <AnchorPane prefHeight="491.0" prefWidth="282.0">
+      <AnchorPane fx:id="anchorPane" prefHeight="491.0" prefWidth="282.0">
          <children>
             <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INGRESA AQUI TUS DATOS PARA REGISTRARTE" textAlignment="CENTER" wrappingWidth="239.36328125" />
             <TextField fx:id="fieldDni" layoutX="29.0" layoutY="51.0" prefHeight="25.0" prefWidth="191.0" promptText="DNI" />
@@ -27,7 +27,7 @@
             <Button fx:id="registrerButton" layoutX="149.0" layoutY="414.0" mnemonicParsing="false" onAction="#registerClient" text="REGISTRARSE" />
             <ImageView fx:id="returnButton" fitHeight="43.0" fitWidth="43.0" layoutX="14.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@return.png" />
+                  <Image url="@../../../../IconsImages/return.png" />
                </image>
             </ImageView>
          </children>

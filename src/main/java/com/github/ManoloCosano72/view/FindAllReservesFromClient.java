@@ -1,5 +1,6 @@
 package com.github.ManoloCosano72.view;
 
+
 import javafx.fxml.Initializable;
 
 import java.io.IOException;

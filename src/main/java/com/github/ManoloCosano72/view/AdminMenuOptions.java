@@ -17,14 +17,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminMenuOptions extends Controller implements Initializable {
-    //@FXML
-    //private AnchorPane anchorPane;
+    @FXML
+    private AnchorPane anchorPane;
     @FXML
     private Button findClients;
-    //@FXML
-    //private Button findClientsByDni;
-    //@FXML
-    //private Button findClientsByName;
     @FXML
     private Button deleteClients;
     @FXML
@@ -33,8 +29,6 @@ public class AdminMenuOptions extends Controller implements Initializable {
     private Button createRooms;
     @FXML
     private Button updateRoom;
-    @FXML
-    private Button findRoomByCode;
     @FXML
     private Button deleteRooms;
     @FXML
@@ -89,16 +83,10 @@ public class AdminMenuOptions extends Controller implements Initializable {
     public void goToFindClients() throws Exception {
 
     }
+    @FXML
+    public void goToFindAllRooms() throws Exception {
 
-    //@FXML
-    //public void goToFindClientsByDni() throws Exception {
-
-    //}
-
-    //@FXML
-    //public void goToFindClientsByName() throws Exception {
-    //    App.currentController.changeScene(Scenes.FINDCLIENTSBYNAME, null);
-    //}
+    }
 
     @FXML
     public void goToDeleteClients() throws Exception {
@@ -121,17 +109,9 @@ public class AdminMenuOptions extends Controller implements Initializable {
     }
 
     @FXML
-    public void goToFindRoomsByCode() throws Exception {
-        App.currentController.openModal(Scenes.FINDROOMBYCODE, "Encontrar habitacion", this, null);
-    }
-
-    @FXML
     public void goToDeleteRooms() throws Exception {
         App.currentController.openModal(Scenes.DELETEROOM, "Eliminar habitacion", this, null);
     }
 
-    @FXML
-    public void goToFindAllRooms() throws Exception {
 
-    }
 }
