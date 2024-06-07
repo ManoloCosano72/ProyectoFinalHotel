@@ -62,7 +62,7 @@ public class UpdateDataFromClient extends Controller implements Initializable {
         client.setPassword(fieldPassword.getText());
         ClientDAO.build().update(client);
         alert.showAndWait();
-        App.currentController.changeScene(Scenes.ADMINMENUOPTIONS, null);
+        App.currentController.changeScene(Scenes.CLIENTMENUOPTIONS, null);
     }
 
 }

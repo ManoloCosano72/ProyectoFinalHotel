@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -15,8 +16,6 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import static com.github.ManoloCosano72.model.dao.ClientDAO.build;
 
 public class UpdateRoom extends Controller implements Initializable {
     @FXML
@@ -33,6 +32,8 @@ public class UpdateRoom extends Controller implements Initializable {
     private TextField fieldPrice;
     @FXML
     private Button updateButton;
+    @FXML
+    private ChoiceBox<Room> choiceBox;
     @Override
     public void onOpen(Object input) throws IOException {
 

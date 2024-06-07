@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ManoloCosano72.view.UpdateReserveFromClient">
    <children>
       <AnchorPane fx:id="anchorPane" prefHeight="324.0" prefWidth="334.0">
@@ -14,7 +13,7 @@
             <Text layoutX="36.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INTRODUZCA DATOS PARA ACTUALIZAR RESERVA" />
             <TextField fx:id="fieldDate" layoutX="58.0" layoutY="88.0" prefHeight="31.0" prefWidth="195.0" promptText="FECHA" />
             <TextField fx:id="fieldCodRoom" layoutX="58.0" layoutY="162.0" prefHeight="31.0" prefWidth="195.0" promptText="COD HABITACION" />
-            <Button fx:id="updateButton" layoutX="95.0" layoutY="247.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="ACTUALIZAR" />
+            <Button fx:id="updateButton" layoutX="95.0" layoutY="247.0" mnemonicParsing="false" onAction="#updateReserve" prefHeight="31.0" prefWidth="109.0" text="ACTUALIZAR" />
          </children>
       </AnchorPane>
    </children>

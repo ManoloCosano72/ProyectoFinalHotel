@@ -56,24 +56,29 @@ public class ClientMenuOptions extends Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    @FXML
-    public void goToFindAllReserves() throws Exception {
-        App.currentController.openModal(Scenes.FINDALLRESERVESFROMCLIENT, "Buscar todas las reservas", this, null);
-    }
+
     @FXML
     public void goToDeleteReserves() throws Exception {
         App.currentController.openModal(Scenes.DELETERESERVESFROMCLIENT, "Borrar reservas de la lista", this, null);
     }
+
     @FXML
     public void goToUpdateDataFromClient() throws Exception {
         App.currentController.openModal(Scenes.UPDATEDATAFROMCLIENT, "Actualizar datos ", this, null);
     }
+
     @FXML
     public void goToCreateReserve() throws Exception {
         App.currentController.openModal(Scenes.CREATERESERVE, "Crear reservas", this, null);
     }
+
     @FXML
     public void goToUpdateReserve() throws Exception {
         App.currentController.openModal(Scenes.UPDATERESERVE, "Actualizar reservas ", this, null);
+    }
+
+    @FXML
+    public void findAllReserves() {
+
     }
 }

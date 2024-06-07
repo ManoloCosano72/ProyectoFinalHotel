@@ -1,7 +1,13 @@
 package com.github.ManoloCosano72.view;
 
+import com.github.ManoloCosano72.App;
+import com.github.ManoloCosano72.model.dao.ClientDAO;
+import com.github.ManoloCosano72.model.dao.ReserveDAO;
+import com.github.ManoloCosano72.model.entity.Client;
+import com.github.ManoloCosano72.model.entity.Reserve;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -33,5 +39,14 @@ public class DeleteReservesFromClient extends Controller implements Initializabl
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+    @FXML
+    public void deleteReserve() throws Exception {
+        Reserve reserve = new Reserve();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Reserva borrada con exito");
+        reserve.setCodReserve(fieldCodReserve.getText());
+        ReserveDAO.build().delete(reserve);
+        alert.showAndWait();
+        App.currentController.changeScene(Scenes.CLIENTMENUOPTIONS,null);
     }
 }

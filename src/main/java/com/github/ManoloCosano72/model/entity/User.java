@@ -88,18 +88,15 @@ public class User {
     public void setAdmin(int admin) {
         this.admin = admin;
     }
-    public int Admin(){
-        return 1;
-    }
 
     public static boolean validatePassword(String password) {
         boolean validateResult;
         Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%*?&])[A-Za-z\\d@$!.#_()%*?&]{8,}$");
         Matcher passwordMatcher = passwordPattern.matcher(password);
-        if(passwordMatcher.matches()){
-            validateResult=true;
-        }else{
-            validateResult=false;
+        if (passwordMatcher.matches()) {
+            validateResult = true;
+        } else {
+            validateResult = false;
         }
         return validateResult;
     }
@@ -108,10 +105,10 @@ public class User {
         boolean validateResult;
         Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
         Matcher mailMatcher = mailPattern.matcher(mail);
-        if(mailMatcher.matches()){
-            validateResult=true;
-        }else{
-            validateResult=false;
+        if (mailMatcher.matches()) {
+            validateResult = true;
+        } else {
+            validateResult = false;
         }
         return validateResult;
     }
@@ -119,14 +116,13 @@ public class User {
     @Override
     public boolean equals(Object obj) {
         boolean isEquals;
-        if (this == obj){
+        if (this == obj) {
             isEquals = true;
-        }
-        else if (obj == null || getClass() != obj.getClass()){
+        } else if (obj == null || getClass() != obj.getClass()) {
             isEquals = false;
-        }else{
+        } else {
             User user = (User) obj;
-            return Objects.equals(dni, user.dni)&& Objects.equals(mail, user.mail);
+            return Objects.equals(dni, user.dni) && Objects.equals(mail, user.mail);
         }
         return isEquals;
     }

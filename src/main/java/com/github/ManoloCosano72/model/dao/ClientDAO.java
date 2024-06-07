@@ -8,11 +8,12 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYDNI = "SELECT Dni FROM Client WHERE Dni =?";
     private final static String FINDBYMAIL = "SELECT Dni,Mail,Password FROM Client WHERE Mail =?";
-    private final static String FINDBYNAME = "SELECT Name FROM Client WHERE Name=?";
     private final static String FINDALL = "SELECT Dni, Name, Surnames, Phone,Mail,Admin FROM Client";
     private final static String DELETE = "DELETE FROM Client WHERE Dni=?";
     private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=?, Admin=?  WHERE Dni=? ";
@@ -56,58 +57,44 @@ public class ClientDAO implements DAO<Client, String> {
 
     public Client findByDni(String dni) {
         Client result = new Client();
-        if (dni == null) return null;
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYDNI)) {
-            pst.setString(1, dni);
-            ResultSet res = pst.executeQuery();
-            if (res.next()) {
-                result.setDni(res.getString("Dni"));
-                result.setName(res.getString("Name"));
+        if (dni != null) {
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYDNI)) {
+                pst.setString(1, dni);
+                ResultSet res = pst.executeQuery();
+                if (res.next()) {
+                    result.setDni(res.getString("Dni"));
+                    result.setName(res.getString("Name"));
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-            res.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
         return result;
     }
+
     public Client findByMail(String mail) {
         Client result = new Client();
-        if (mail == null) return null;
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYMAIL)) {
-            pst.setString(1, mail);
-            ResultSet res = pst.executeQuery();
-            if (res.next()) {
-                result.setMail(res.getString("Mail"));
+        if (mail != null) {
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYMAIL)) {
+                pst.setString(1, mail);
+                ResultSet res = pst.executeQuery();
+                if (res.next()) {
+                    result.setMail(res.getString("Mail"));
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-            res.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
         return result;
     }
 
-
-    public Client findByName(String name) {
-        Client result = new Client();
-        if (name == null) return null;
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYNAME)) {
-            pst.setString(1, name);
+    public List<Client> findAll() {
+        List<Client> clients = new ArrayList<>();
+        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)) {
             ResultSet res = pst.executeQuery();
-            if (res.next()) {
-                result.setName(res.getString("Name"));
-                result.setSurnames(res.getString("Surnames"));
-            }
-            res.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-    public Client findAll(){
-        Client result = new Client();
-        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
-            ResultSet res = pst.executeQuery();
-            while (res.next()){
+            while (res.next()) {
                 Client c = new Client();
                 c.setDni(res.getString("Dni"));
                 c.setName(res.getString("Name"));
@@ -115,11 +102,12 @@ public class ClientDAO implements DAO<Client, String> {
                 c.setPhone(res.getString("Phone"));
                 c.setMail(res.getString("Mail"));
                 c.setAdmin(res.getInt("Admin"));
+                clients.add(c);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        return result;
+        return clients;
     }
 
     public Client update(Client entity) {
@@ -130,7 +118,7 @@ public class ClientDAO implements DAO<Client, String> {
             pst.setString(3, entity.getPhone());
             pst.setString(4, entity.getMail());
             pst.setString(5, entity.getPassword());
-            pst.setInt(6,entity.getAdmin());
+            pst.setInt(6, entity.getAdmin());
             pst.setString(7, entity.getDni());
             pst.executeUpdate();
         } catch (SQLException e) {
@@ -139,7 +127,7 @@ public class ClientDAO implements DAO<Client, String> {
         return result;
     }
 
-    public static ClientDAO build(){
+    public static ClientDAO build() {
         return new ClientDAO();
     }
 
