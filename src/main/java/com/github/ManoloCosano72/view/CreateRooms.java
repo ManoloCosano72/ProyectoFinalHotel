@@ -2,7 +2,6 @@ package com.github.ManoloCosano72.view;
 
 import com.github.ManoloCosano72.App;
 import com.github.ManoloCosano72.model.dao.RoomDAO;
-import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.entity.Room;
 import com.github.ManoloCosano72.model.entity.enums.TypeR;
 import javafx.fxml.FXML;

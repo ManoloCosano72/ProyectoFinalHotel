@@ -17,7 +17,7 @@
          </font>
       </Text>
       <Text layoutX="382.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Aqui puedes escoger diversas opciones para hacer alguna actividad" wrappingWidth="377.13671875" />
-      <Button fx:id="findAllReserves" layoutX="810.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToFindAllReserves" text="BUSCAR RESERVAS" />
+      <Button fx:id="findAllReserves" layoutX="810.0" layoutY="104.0" mnemonicParsing="false" text="BUSCAR RESERVAS" />
       <Button fx:id="deleteReserves" layoutX="286.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToDeleteReserves" text="BORRAR RESERVAS" />
       <Button fx:id="updateReserve" layoutX="450.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateReserve" text="ACTUALIZAR RESERVA " />
       <Button fx:id="updateData" layoutX="62.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateDataFromClient" text="ACTUALIZAR DATOS PERSONALES" />

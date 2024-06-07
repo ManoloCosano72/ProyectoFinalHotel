@@ -44,6 +44,6 @@ public class DeleteClients extends Controller implements Initializable {
         client.setDni(fieldDni.getText());
         ClientDAO.build().delete(client);
         alert.showAndWait();
-        App.currentController.changeScene(Scenes.MAIN,null);
+        App.currentController.changeScene(Scenes.ADMINMENUOPTIONS,null);
     }
 }

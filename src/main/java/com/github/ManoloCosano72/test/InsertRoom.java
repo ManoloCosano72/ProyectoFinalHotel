@@ -8,13 +8,13 @@ import com.github.ManoloCosano72.model.entity.enums.TypeR;
 public class InsertRoom {
     public static void main(String[] args) {
         Room r = new Room();
-        r.setCodRoom("12345");
-        r.setBeds(8);
-        r.setWindows(5);
-        r.setTypeR(TypeR.SUITE);
-        r.setPrice(1200);
+        r.setCodRoom("8888W");
+        r.setBeds(5);
+        r.setWindows(3);
+        r.setTypeR(TypeR.DELUXE);
+        r.setPrice(500);
         RoomDAO roDAO = new RoomDAO();
-        roDAO.findByType(r);
+        roDAO.save(r);
     }
 
 }

@@ -3,7 +3,6 @@ package com.github.ManoloCosano72.view;
 import com.github.ManoloCosano72.App;
 import com.github.ManoloCosano72.model.dao.ClientDAO;
 import com.github.ManoloCosano72.model.entity.Client;
-import com.github.ManoloCosano72.model.entity.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -15,10 +14,8 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
-import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 
-import static com.github.ManoloCosano72.model.dao.ClientDAO.build;
 
 public class RegistrerController extends Controller implements Initializable {
     @FXML

@@ -22,7 +22,7 @@
             <TextField fx:id="fieldPhone" layoutX="35.0" layoutY="152.0" prefHeight="25.0" prefWidth="191.0" promptText="TELEFONO" />
             <TextField fx:id="fieldMail" layoutX="35.0" layoutY="197.0" prefHeight="25.0" prefWidth="191.0" promptText="CORREO" />
             <TextField fx:id="fieldPassword" layoutX="35.0" layoutY="246.0" prefHeight="25.0" prefWidth="191.0" promptText="CONTRASEÑA" />
-            <Button fx:id="updateButton" layoutX="170.0" layoutY="318.0" mnemonicParsing="false" text="CAMBIAR" />
+            <Button fx:id="updateButton" layoutX="170.0" layoutY="318.0" mnemonicParsing="false" onAction="#updateData" text="CAMBIAR" />
             <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="18.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../IconsImages/return.png" />

@@ -17,13 +17,12 @@
             <Image url="@../../../../IconsImages/exit.png" />
          </image>
       </ImageView>
-      <Button fx:id="findClients" layoutX="331.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToFindClients" text="BUSCAR CLIENTES" />
-      <Button fx:id="deleteClients" layoutX="536.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToDeleteClients" text="BORRAR CLIENTES" />
-      <Button fx:id="updateData" layoutX="719.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToUpdateData" text="ACTUALIZAR DATOS" />
-      <Button fx:id="createRooms" layoutX="288.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToCreateRooms" text="CREAR HABITACIONES" />
-      <Button fx:id="updateRoom" layoutX="464.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToUpdateRoom" text="ACTUALIZAR HABITACION" />
-      <Button fx:id="deleteRooms" layoutX="665.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToDeleteRooms" text="BORRAR HABITACIONES" />
-      <Button fx:id="findAllRooms" layoutX="852.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToFindAllRooms" text="BUSCAR HABITACIONES" />
+      <Button fx:id="findClients" layoutX="331.0" layoutY="111.0" mnemonicParsing="false" onAction="#findAllClients" text="BUSCAR CLIENTES" />
+      <Button fx:id="deleteClients" layoutX="526.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToDeleteClients" text="BORRAR CLIENTES" />
+      <Button fx:id="updateData" layoutX="703.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToUpdateData" text="ACTUALIZAR DATOS" />
+      <Button fx:id="createRooms" layoutX="698.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToCreateRooms" text="CREAR HABITACIONES" />
+      <Button fx:id="deleteRooms" layoutX="521.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToDeleteRooms" text="BORRAR HABITACIONES" />
+      <Button fx:id="findAllRooms" layoutX="331.0" layoutY="162.0" mnemonicParsing="false" onAction="#findAllRooms" text="BUSCAR HABITACIONES" />
       <TableView fx:id="tableViewClient" layoutX="34.0" layoutY="212.0" prefHeight="552.0" prefWidth="622.0">
         <columns>
           <TableColumn fx:id="columnDNI" prefWidth="114.0" text="DNI" />
@@ -34,9 +33,9 @@
             <TableColumn fx:id="columnAdmin" prefWidth="99.0" text="ADMIN" />
         </columns>
       </TableView>
-      <TableView fx:id="tableViewRoom" layoutX="703.0" layoutY="212.0" prefHeight="552.0" prefWidth="511.0">
+      <TableView fx:id="tableViewRoom" editable="true" layoutX="703.0" layoutY="212.0" prefHeight="552.0" prefWidth="511.0">
         <columns>
-          <TableColumn fx:id="columnCodReserve" prefWidth="120.0" text="CODRESERVA" />
+          <TableColumn fx:id="columnCodRoom" editable="false" prefWidth="120.0" text="CODHABITACION" />
           <TableColumn fx:id="columnBeds" prefWidth="68.0" text="CAMAS" />
             <TableColumn fx:id="columnWindows" prefWidth="107.0" text="VENTANAS" />
             <TableColumn fx:id="columnTypeR" prefWidth="82.0" text="TIPO HAB" />

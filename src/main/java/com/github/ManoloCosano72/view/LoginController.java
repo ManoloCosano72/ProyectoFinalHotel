@@ -7,7 +7,6 @@ import com.github.ManoloCosano72.model.session.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -51,13 +50,17 @@ public class LoginController extends Controller implements Initializable {
 
     @FXML
     private void enterButton() throws Exception {
-        Client client = new Client();
-        client.setMail(fieldMail.getText());
-        client.setPassword(fieldPassword.getText());
-        ClientDAO.build().findByMail(client.getMail());
-        Session.LogIn(client);
-        App.currentController.changeScene(Scenes.ADMINMENUOPTIONS,null);
+        //Client client = new Client();
+        //client.setMail(fieldMail.getText());
+        //client.setPassword(fieldPassword.getText());
 
+        Client client = ClientDAO.build().findByMail(fieldMail.getText());
+        Session.getInstance().logIn(client);
+        if (client.getAdmin() == 0) {
+            App.currentController.changeScene(Scenes.ADMINMENUOPTIONS, null);
+        } else if (client.getAdmin() > 0 || client.getAdmin() < 10) {
+            App.currentController.changeScene(Scenes.CLIENTMENUOPTIONS, null);
+        }
 
     }
 }

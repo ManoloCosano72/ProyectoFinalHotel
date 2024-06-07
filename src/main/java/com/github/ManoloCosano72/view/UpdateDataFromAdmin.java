@@ -1,7 +1,12 @@
 package com.github.ManoloCosano72.view;
 
+import com.github.ManoloCosano72.App;
+import com.github.ManoloCosano72.model.dao.ClientDAO;
+import com.github.ManoloCosano72.model.entity.Client;
+import com.github.ManoloCosano72.model.session.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -33,7 +38,7 @@ public class UpdateDataFromAdmin extends Controller implements Initializable {
     private ImageView returnButton;
     @Override
     public void onOpen(Object input) throws IOException {
-
+        System.out.println(Session.getInstance().getUserLogged());
     }
 
     @Override
@@ -43,6 +48,24 @@ public class UpdateDataFromAdmin extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        fieldName.setText(Session.getInstance().getUserLogged().getName());
+        fieldSurnames.setText(Session.getInstance().getUserLogged().getSurnames());
+        fieldPhone.setText(Session.getInstance().getUserLogged().getPhone());
+        fieldMail.setText(Session.getInstance().getUserLogged().getMail());
+        fieldPassword.setText(Session.getInstance().getUserLogged().getPassword());
+    }
+    @FXML
+    public void updateData() throws Exception {
+        Client client = new Client();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Sus datos han sido actualizados con exito");
+        client.setName(fieldName.getText());
+        client.setSurnames(fieldSurnames.getText());
+        client.setPhone(fieldPhone.getText());
+        client.setMail(fieldMail.getText());
+        client.setPassword(fieldPassword.getText());
+        ClientDAO.build().update(client);
+        Session.getInstance().logIn(client);
+        alert.showAndWait();
+        App.currentController.changeScene(Scenes.ADMINMENUOPTIONS, null);
     }
 }
