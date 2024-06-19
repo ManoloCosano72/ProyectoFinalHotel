@@ -5,40 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf82455-6b55-4507-9a65-001cfa575107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Reserve2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/IconsImages/IconoirProfileCircle.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClientDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ReserveDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/RoomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/enums/TypeR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/enums/TypeR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AdminMenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AdminMenuOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ClientMenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/ClientMenuOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateReserveFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateReserveFromClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateRooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/CreateRooms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteClients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteReservesFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteReservesFromClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/DeleteRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/RegistrerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/RegistrerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/Scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/Scenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateDataFromClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateReserveFromClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/UpdateRoom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/adminMenuOptions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/adminMenuOptions.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/clientMenuOptions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/clientMenuOptions.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/createReserveFromClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/createReserveFromClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/deleteRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/deleteRoom.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/findAllReservesFromClient.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/registrer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/registrer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/updateReserveFromClient.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/view/updateRoom.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,41 +52,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.InsertClient.executor": "Run",
-    "Application.InsertReserve.executor": "Run",
-    "Application.InsertRoom.executor": "Run",
-    "Application.LoadConnection.executor": "Run",
-    "Application.SaveConnection.executor": "Run",
-    "Application.loadConnection.executor": "Run",
-    "Application.saveConnection.executor": "Run",
-    "Application.testDelete1.executor": "Run",
-    "Application.testInsert1.executor": "Run",
-    "Application.testInsert2.executor": "Run",
-    "Application.testInsert3.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/java/com/github/ManoloCosano72/view",
-    "last_opened_file_path": "C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/resources/IconsImages",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsertClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsertReserve.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsertRoom.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoadConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SaveConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.loadConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.saveConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testDelete1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testInsert1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testInsert2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testInsert3.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/java/com/github/ManoloCosano72/view&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Manuel/IdeaProjects/ProyectoHotel/src/main/resources/IconsImages&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.ManoloCosano72.model.connection" />
