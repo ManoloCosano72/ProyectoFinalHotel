@@ -75,7 +75,7 @@ public class RoomDAO implements DAO<Room, String> {
         return rooms;
     }
 
-    public Room findByCodRoom(String cR) {
+    public  Room findByCodRoom(String cR) {
         Room result = new Room();
         if (cR != null) {
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYCODROOM)) {

@@ -6,6 +6,7 @@ import com.github.ManoloCosano72.model.dao.RoomDAO;
 import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.entity.Room;
 
+import com.github.ManoloCosano72.model.entity.enums.TypeR;
 import com.github.ManoloCosano72.model.session.Session;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -97,10 +98,12 @@ public class AdminMenuOptions extends Controller implements Initializable {
         columnBeds.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getBeds()).asObject());
         columnBeds.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
 
-        columnWindows.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getBeds()).asObject());
+        columnWindows.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getWindows()).asObject());
         columnWindows.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
 
         columnTypeR.setCellValueFactory(rooms -> new SimpleStringProperty(rooms.getValue().getTypeR().toString()));
+        columnTypeR.setCellFactory(TextFieldTableCell.forTableColumn());
+
 
         columnPrice.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getPrice()).asObject());
         columnPrice.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
@@ -153,7 +156,11 @@ public class AdminMenuOptions extends Controller implements Initializable {
             if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
-            Room roomUpdated = event.getRowValue();
+            if (event.getNewValue() == null || event.getNewValue().equals(event.getOldValue())) {
+                Room roomUpdated = event.getRowValue();
+                roomUpdated.setTypeR(TypeR.valueOf(event.getNewValue()));
+                RoomDAO.build().update(roomUpdated);
+            }
         });
         TypeRComboBox.setItems(FXCollections.observableArrayList("DELUXE", "BIGGER", "SUITE"));
     }

@@ -1,8 +1,13 @@
 package com.github.ManoloCosano72.view;
 
 import com.github.ManoloCosano72.App;
+import com.github.ManoloCosano72.model.dao.ReserveDAO;
 import com.github.ManoloCosano72.model.entity.Reserve;
+import com.github.ManoloCosano72.model.entity.Reserve2;
 import com.github.ManoloCosano72.model.session.Session;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,6 +20,7 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ClientMenuOptions extends Controller implements Initializable {
@@ -29,7 +35,7 @@ public class ClientMenuOptions extends Controller implements Initializable {
     @FXML
     private Button createReserve;
     @FXML
-    private TableView<Reserve> tableViewReserve;
+    private TableView<Reserve2> tableViewReserve;
     @FXML
     private TableColumn<Reserve, String> columnCodReserve;
     @FXML
@@ -38,7 +44,7 @@ public class ClientMenuOptions extends Controller implements Initializable {
     private TableColumn<Reserve, String> columnCodRoom;
     @FXML
     private ImageView closeSession;
-    private ObservableList<Reserve> reserves;
+    private ObservableList<Reserve2> reserves;
 
 
     @Override
@@ -53,7 +59,9 @@ public class ClientMenuOptions extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        columnCodReserve.setCellValueFactory(reserve -> new SimpleStringProperty(reserve.getValue().getCodReserve()));
+        columnDate.setCellValueFactory(reserve -> new SimpleObjectProperty<>(reserve.getValue().getDate()));
+        columnCodRoom.setCellValueFactory(reserve -> new SimpleStringProperty(reserve.getValue().getRoom().getCodRoom()));
     }
 
     @FXML
@@ -75,7 +83,9 @@ public class ClientMenuOptions extends Controller implements Initializable {
 
     @FXML
     private void findAllReserves() {
-
+        List<Reserve2> reserves = ReserveDAO.build().findByReservesByClient();
+        this.reserves = FXCollections.observableList(reserves);
+        tableViewReserve.setItems(this.reserves);
     }
     @FXML
     private void logOut(){

@@ -47,7 +47,7 @@ public class DeleteReservesFromClient extends Controller implements Initializabl
         Reserve2 reserve = new Reserve2();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Reserva borrada con exito");
         reserve.setCodReserve(Integer.parseInt(fieldCodReserve.getText()));
-        ReserveDAO.build().delete(reserve);
+        ReserveDAO.build().deleteReserveFromList(reserve);
         alert.showAndWait();
         App.currentController.changeScene(Scenes.CLIENTMENUOPTIONS,null);
     }
