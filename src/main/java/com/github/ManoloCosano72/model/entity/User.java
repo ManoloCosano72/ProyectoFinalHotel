@@ -122,7 +122,7 @@ public class User {
             isEquals = false;
         } else {
             User user = (User) obj;
-            return Objects.equals(dni, user.dni) && Objects.equals(mail, user.mail);
+            return Objects.equals(dni, user.dni) && Objects.equals(mail, user.mail) && Objects.equals(phone, user.phone);
         }
         return isEquals;
     }

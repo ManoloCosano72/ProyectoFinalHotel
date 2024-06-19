@@ -25,7 +25,7 @@
             <TextField fx:id="fieldPassword" layoutX="29.0" layoutY="302.0" prefHeight="25.0" prefWidth="191.0" promptText="CONTRASEÑA" />
             <TextField fx:id="fieldAdmin" layoutX="29.0" layoutY="355.0" prefHeight="25.0" prefWidth="191.0" promptText="ADMIN" />
             <Button fx:id="registrerButton" layoutX="149.0" layoutY="414.0" mnemonicParsing="false" onAction="#registerClient" text="REGISTRARSE" />
-            <ImageView fx:id="returnButton" fitHeight="43.0" fitWidth="43.0" layoutX="14.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="returnButton" fitHeight="43.0" fitWidth="43.0" layoutX="14.0" layoutY="402.0" onMouseClicked="#goToMainController" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../IconsImages/return.png" />
                </image>

@@ -17,21 +17,20 @@
          </font>
       </Text>
       <Text layoutX="382.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Aqui puedes escoger diversas opciones para hacer alguna actividad" wrappingWidth="377.13671875" />
-      <Button fx:id="findAllReserves" layoutX="810.0" layoutY="104.0" mnemonicParsing="false" text="BUSCAR RESERVAS" />
-      <Button fx:id="deleteReserves" layoutX="286.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToDeleteReserves" text="BORRAR RESERVAS" />
-      <Button fx:id="updateReserve" layoutX="450.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateReserve" text="ACTUALIZAR RESERVA " />
-      <Button fx:id="updateData" layoutX="62.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateDataFromClient" text="ACTUALIZAR DATOS PERSONALES" />
-      <Button fx:id="createReserve" layoutX="656.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToCreateReserve" text="CREAR RESERVA" />
-      <ImageView fx:id="closeSession" fitHeight="52.0" fitWidth="109.0" layoutX="849.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="findAllReserves" layoutX="769.0" layoutY="104.0" mnemonicParsing="false" onAction="#findAllReserves" text="BUSCAR RESERVAS" />
+      <Button fx:id="deleteReserves" layoutX="405.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToDeleteReserves" text="BORRAR RESERVAS" />
+      <Button fx:id="updateData" layoutX="147.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToUpdateDataFromClient" text="ACTUALIZAR DATOS PERSONALES" />
+      <Button fx:id="createReserve" layoutX="600.0" layoutY="104.0" mnemonicParsing="false" onAction="#goToCreateReserve" text="CREAR RESERVA" />
+      <ImageView fx:id="closeSession" fitHeight="52.0" fitWidth="109.0" layoutX="849.0" layoutY="23.0" onMouseClicked="#logOut" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../IconsImages/exit.png" />
          </image>
       </ImageView>
-      <TableView fx:id="tableViewReserve" layoutX="47.0" layoutY="166.0" prefHeight="474.0" prefWidth="996.0">
+      <TableView fx:id="tableViewReserve" editable="true" layoutX="47.0" layoutY="166.0" prefHeight="474.0" prefWidth="996.0">
          <columns>
-            <TableColumn fx:id="columnCodReserve" prefWidth="315.0" text="CODIGO RESERVA" />
+            <TableColumn fx:id="columnCodReserve" editable="false" prefWidth="315.0" text="CODIGO RESERVA" />
             <TableColumn fx:id="columnDate" minWidth="0.0" prefWidth="286.0" text="FECHA" />
-            <TableColumn fx:id="columnCodRoom" minWidth="0.0" prefWidth="386.0" text="CODIGO HABITACION" />
+            <TableColumn fx:id="columnCodRoom" minWidth="0.0" prefWidth="394.0" text="CODIGO HABITACION" />
          </columns>
       </TableView>
    </children>

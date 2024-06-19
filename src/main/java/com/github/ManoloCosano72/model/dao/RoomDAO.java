@@ -14,7 +14,7 @@ import java.util.List;
 
 
 public class RoomDAO implements DAO<Room, String> {
-    private final static String FINDBYCODROOM = "SELECT r.codRoom FROM Room AS r WHERE r.codRoom=? ";
+    private final static String FINDBYCODROOM = "SELECT r.codRoom, r.beds, r.windows, r.TypeR, r.price FROM Room AS r WHERE r.codRoom=? ";
     private final static String FINDALLROOM = "SELECT codRoom, Beds, Windows,TypeR, Price FROM Room";
     private final static String DELETE = "DELETE from Room WHERE CodRoom=?";
     private final static String UPDATE = "UPDATE Room SET Beds=? ,Windows=?,TypeR=?, Price=? WHERE CodRoom=?";
@@ -83,6 +83,10 @@ public class RoomDAO implements DAO<Room, String> {
                 ResultSet res = pst.executeQuery();
                 if (res.next()) {
                     result.setCodRoom(res.getString("CodRoom"));
+                    result.setBeds(res.getInt("beds"));
+                    result.setWindows(res.getInt("windows"));
+                    result.setTypeR(TypeR.valueOf(res.getString("TypeR")));
+                    result.setPrice(res.getInt("price"));
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

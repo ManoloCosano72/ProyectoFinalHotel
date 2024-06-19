@@ -5,6 +5,7 @@ import com.github.ManoloCosano72.model.dao.ClientDAO;
 import com.github.ManoloCosano72.model.dao.ReserveDAO;
 import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.entity.Reserve;
+import com.github.ManoloCosano72.model.entity.Reserve2;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -15,6 +16,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DeleteReservesFromClient extends Controller implements Initializable {
@@ -41,10 +43,10 @@ public class DeleteReservesFromClient extends Controller implements Initializabl
 
     }
     @FXML
-    public void deleteReserve() throws Exception {
-        Reserve reserve = new Reserve();
+    private void deleteReserve() throws Exception {
+        Reserve2 reserve = new Reserve2();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Reserva borrada con exito");
-        reserve.setCodReserve(fieldCodReserve.getText());
+        reserve.setCodReserve(Integer.parseInt(fieldCodReserve.getText()));
         ReserveDAO.build().delete(reserve);
         alert.showAndWait();
         App.currentController.changeScene(Scenes.CLIENTMENUOPTIONS,null);

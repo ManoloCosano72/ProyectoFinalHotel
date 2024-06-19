@@ -5,16 +5,15 @@ import com.github.ManoloCosano72.model.dao.ClientDAO;
 import com.github.ManoloCosano72.model.dao.RoomDAO;
 import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.entity.Room;
+
+import com.github.ManoloCosano72.model.session.Session;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -37,7 +36,7 @@ public class AdminMenuOptions extends Controller implements Initializable {
     @FXML
     private Button createRooms;
     @FXML
-    private Button updateRoom;
+    private ComboBox<String> TypeRComboBox;
     @FXML
     private Button deleteRooms;
     @FXML
@@ -94,64 +93,111 @@ public class AdminMenuOptions extends Controller implements Initializable {
 
         tableViewRoom.setEditable(true);
         columnCodRoom.setCellValueFactory(rooms -> new SimpleStringProperty(rooms.getValue().getCodRoom()));
+
         columnBeds.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getBeds()).asObject());
         columnBeds.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+
         columnWindows.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getBeds()).asObject());
+        columnWindows.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+
         columnTypeR.setCellValueFactory(rooms -> new SimpleStringProperty(rooms.getValue().getTypeR().toString()));
+
         columnPrice.setCellValueFactory(rooms -> new SimpleIntegerProperty(rooms.getValue().getPrice()).asObject());
+        columnPrice.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+
         columnBeds.setOnEditCommit(event -> {
-            if(event.getNewValue()== event.getOldValue()){
+            if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
 
-            if(event.getNewValue() > 0){
+            if (event.getNewValue() > 0 && event.getNewValue() < 10) {
                 Room roomUpdated = event.getRowValue();
                 roomUpdated.setBeds(event.getNewValue());
                 RoomDAO.build().update(roomUpdated);
-            }else{
+            } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("No es valido");
+                alert.setContentText("Escribe un número de camas, minimo 1 y maximo 9");
                 alert.show();
             }
         });
+        columnWindows.setOnEditCommit(event -> {
+            if (event.getNewValue() == event.getOldValue()) {
+                return;
+            }
+
+            if (event.getNewValue() > 0 && event.getNewValue() < 10) {
+                Room roomUpdated = event.getRowValue();
+                roomUpdated.setWindows(event.getNewValue());
+                RoomDAO.build().update(roomUpdated);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Escribe un número de ventanas, mínimo 1 y máximo 9");
+                alert.show();
+            }
+        });
+        columnPrice.setOnEditCommit(event -> {
+                if (event.getNewValue() == event.getOldValue()) {
+                    return;
+                }
+                if (event.getNewValue() > 0 && event.getNewValue() < 9999) {
+                    Room roomUpdated = event.getRowValue();
+                    roomUpdated.setPrice(event.getNewValue());
+                    RoomDAO.build().update(roomUpdated);
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Escribe un precio entre 1 y 9999");
+                    alert.show();
+                }
+        });
+        columnTypeR.setOnEditCommit(event -> {
+            if (event.getNewValue() == event.getOldValue()) {
+                return;
+            }
+            Room roomUpdated = event.getRowValue();
+        });
+        TypeRComboBox.setItems(FXCollections.observableArrayList("DELUXE", "BIGGER", "SUITE"));
     }
 
+
     @FXML
-    public void goToDeleteClients() throws Exception {
+    private void goToDeleteClients() throws Exception {
         App.currentController.openModal(Scenes.DELETECLIENTS, "Eliminar cliente", this, null);
     }
 
     @FXML
-    public void goToUpdateData() throws Exception {
-        App.currentController.openModal(Scenes.UPDATEDATAFROMADMIN, "Actualizar datos", this, null);
-    }
-
-    @FXML
-    public void goToCreateRooms() throws Exception {
+    private void goToCreateRooms() throws Exception {
         App.currentController.openModal(Scenes.CREATEROOMS, "Crear habitacion", this, null);
     }
 
     @FXML
-    public void goToUpdateRoom() throws Exception {
-        App.currentController.openModal(Scenes.UPDATEROOMS, "Actualizar habitacion", this, null);
-    }
-
-    @FXML
-    public void goToDeleteRooms() throws Exception {
+    private void goToDeleteRooms() throws Exception {
         App.currentController.openModal(Scenes.DELETEROOM, "Eliminar habitacion", this, null);
     }
+    @FXML
+    private void goToUpdateDataFromAdmin() throws Exception{
+        App.currentController.openModal(Scenes.UPDATEDATAFROMADMIN,"Actualizar datos", this, null);
+    }
 
     @FXML
-    public void findAllClients() throws Exception {
+    private void findAllClients() {
         List<Client> clients = ClientDAO.build().findAll();
         this.clients = FXCollections.observableList(clients);
         tableViewClient.setItems(this.clients);
     }
 
     @FXML
-    public void findAllRooms() throws Exception {
+    private void findAllRooms() {
         List<Room> rooms = RoomDAO.build().findAll();
         this.rooms = FXCollections.observableList(rooms);
         tableViewRoom.setItems(this.rooms);
+    }
+    @FXML
+    private void updateTypeR(){
+
+    }
+    @FXML
+    private void logOut(){
+        Session.LogOut();
+        System.exit(0);
     }
 }

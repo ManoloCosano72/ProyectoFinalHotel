@@ -3,74 +3,93 @@ package com.github.ManoloCosano72.model.dao;
 import com.github.ManoloCosano72.model.connection.ConnectionMariaDB;
 import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.entity.Reserve;
+import com.github.ManoloCosano72.model.entity.Reserve2;
+import com.github.ManoloCosano72.model.entity.Room;
 import com.github.ManoloCosano72.model.interfaces.DAO;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReserveDAO implements DAO<Reserve, String> {
-    private final static String FINDBYCODRESERVE = "SELECT r.codReserve FROM Reserve AS r WHERE r.codReserve=?";
-    private final static String FINDBYROOM = "SELECT r.codRoom FROM Reserve AS r WHERE r.codRoom=?";
+public class ReserveDAO implements DAO<Reserve2, Integer> {
+    private final static String FINDBYCODRESERVE = "SELECT r.codReserve FROM Reserva2 AS r WHERE r.codReserve=?";
+    private final static String FINDBYROOM = "SELECT r.codRoom FROM Reserva2 AS r WHERE r.codRoom=?";
     private final static String FINDRESERVESBYCLIENT = "SELECT Dni, CodReserve FROM Dor WHERE Dni=?";
     private final static String FINDALL= "SELECT Dni, codReserve FROM Dor WHERE Dni=?";
-    private final static String DELETE = "DELETE FROM Reserve WHERE CodReserve=? ";
-    private final static String DELETERESERVE = "DELETE FROM Dor WHERE CodReserve=?";
-    private final static String UPDATE = "UPDATE Reserve SET date=?, codRoom=? WHERE codReserve=?";
-    private final static String INSERT = "INSERT INTO Reserve (codReserve,Date,CodRoom) VALUES (?,?,?)";
+    private final static String DELETE = "DELETE FROM Reserva2 WHERE CodReserve=? ";
+    private final static String DELETERESERVE = "DELETE FROM Dor WHERE CodReserve=? AND Dni=?";
+    private final static String UPDATE = "UPDATE Reserva2 SET date=?, codRoom=? WHERE codReserve=?";
+    private final static String INSERT = "INSERT INTO Reserva2 (Date,CodRoom) VALUES (?,?)";
     private final static String INSERTDOR = "INSERT INTO Dor (Dni,CodReserve) VALUES (?,?)";
 
 
     @Override
-    public Reserve save(Reserve entity) {
-        Reserve result = entity;
+    public Reserve2 save(Reserve2 entity) {
+        Reserve2 result = entity;
         if (entity != null) {
-            String codReserve = entity.getCodReserve();
-            if (codReserve != null) {
-                Reserve isInDataBase = findByCodReserve(codReserve);
+            int codReserve = entity.getCodReserve();
+            if (codReserve<1) {
+                Reserve2 isInDataBase = findByCodReserve(codReserve);
                 if (isInDataBase != null) {
-                    try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(INSERT)) {
-                        pst.setString(1, entity.getCodReserve());
-                        pst.setDate(2, (Date) entity.getDate());
-                        pst.setString(3, entity.getRoom().getCodRoom());
+                    try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+                        //leer y setearla
+                        pst.setDate(1, (Date) entity.getDate());
+                        pst.setString(2, entity.getRoom().getCodRoom());
                         pst.executeUpdate();
+                        ResultSet rs = pst.getGeneratedKeys();
+                        if (rs != null && rs.next()) {
+                            entity.setCodReserve(rs.getInt(1));
+                        }
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-                    saveClientR(entity);
+                    saveClientReserve(entity);
                 }
             }
         }
         return result;
     }
 
-    public Reserve saveClientR(Reserve reserve) {
-        if (reserve != null && reserve.getCodReserve() != null) {
+
+
+    public Reserve2 saveClientReserve(Reserve2 reserve) {
+        if (reserve != null && reserve.getCodReserve() <1) {
             if (reserve.getClients() != null) {
+                try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(INSERT , Statement.RETURN_GENERATED_KEYS)) {
+                    Reserve2 entity = reserve;
+                    pst.setDate(1, (Date) entity.getDate());
+                    pst.setString(2, entity.getRoom().getCodRoom());
+                    pst.executeUpdate();
+                    ResultSet rs = pst.getGeneratedKeys();
+                    if (rs != null && rs.next()) {
+                        entity.setCodReserve(rs.getInt(1));
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
                 try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(INSERTDOR)) {
                     for (Client client : reserve.getClients()){
-                        while(client != null && client.getDni() !=null){
+                        if(client != null && client.getDni() !=null){
                             pst.setString(1, client.getDni());
-                            pst.setString(2, reserve.getCodReserve());
+                            pst.setInt(2, reserve.getCodReserve());
+                            pst.executeUpdate();
                         }
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
+
         }
         return reserve;
     }
 
     @Override
-    public Reserve delete(Reserve entity) throws SQLException {
-        if (entity == null || entity.getCodReserve() == null) return entity;
+    public Reserve2 delete(Reserve2 entity) throws SQLException {
+        if (entity == null || entity.getCodReserve() <1) return entity;
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
-            pst.setString(1, entity.getCodReserve());
+            pst.setInt(1, entity.getCodReserve());
             pst.executeUpdate();
         }
         return entity;
@@ -86,14 +105,14 @@ public class ReserveDAO implements DAO<Reserve, String> {
     }
 
 
-    public Reserve findByCodReserve(String codRe) {
-        Reserve result = new Reserve();
-        if (codRe == null) return result;
+    public Reserve2 findByCodReserve(int codRe) {
+        Reserve2 result = new Reserve2();
+        if (codRe <1) return result;
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYCODRESERVE)) {
-            pst.setString(1, codRe);
+            pst.setInt(1, codRe);
             ResultSet res = pst.executeQuery();
             if (res.next()) {
-                result.setCodReserve(res.getString("CodReserve"));
+                result.setCodReserve(res.getInt("CodReserve"));
                 result.setDate(res.getDate("Date"));
             }
         } catch (SQLException e) {
@@ -121,12 +140,12 @@ public class ReserveDAO implements DAO<Reserve, String> {
         }
         return result;
     }
-    public List<Reserve> findAll(String Dni, String codReserve){
-        List<Reserve> reserves = new ArrayList<>();
-        if (Dni !=null && codReserve !=null){
+    public List<Reserve2> findAll(String Dni, int codReserve){
+        List<Reserve2> reserves = new ArrayList<>();
+        if (Dni !=null && codReserve !=0){
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)){
                 pst.setString(1,Dni);
-                pst.setString(2,codReserve);
+                pst.setInt(2,codReserve);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -134,15 +153,15 @@ public class ReserveDAO implements DAO<Reserve, String> {
         return reserves;
     }
 
-    public List<Reserve> findByReservesByClient(String key) {
-        List<Reserve> reserves = new ArrayList<>();
+    public List<Reserve2> findByReservesByClient(String key) {
+        List<Reserve2> reserves = new ArrayList<>();
         if (key != null) {
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDRESERVESBYCLIENT)) {
                 pst.setString(1, key);
                 ResultSet res = pst.executeQuery();
                 while (res.next()) {
-                    Reserve reserve;
-                    reserve = findByCodReserve(res.getString("CodReserve"));
+                    Reserve2 reserve;
+                    reserve = findByCodReserve(res.getInt("CodReserve"));
                     reserves.add(reserve);
                 }
             } catch (SQLException e) {
@@ -157,7 +176,6 @@ public class ReserveDAO implements DAO<Reserve, String> {
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
             pst.setDate(1, (Date) entity.getDate());
             pst.setString(2, entity.getRoom().getCodRoom());
-            pst.setString(3, entity.getCodReserve());
             pst.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -172,4 +190,7 @@ public class ReserveDAO implements DAO<Reserve, String> {
     public static ReserveDAO build(){
         return new ReserveDAO();
     }
+}
+class ReserveLazy extends Reserve2{
+
 }

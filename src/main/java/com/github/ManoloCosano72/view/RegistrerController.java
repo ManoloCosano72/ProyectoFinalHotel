@@ -40,7 +40,7 @@ public class RegistrerController extends Controller implements Initializable {
     private Button registrerButton;
     @FXML
     private ImageView returnButton;
-
+    private ClientDAO clientDAO = new ClientDAO();
 
     @Override
     public void onOpen(Object input) throws IOException {
@@ -58,14 +58,8 @@ public class RegistrerController extends Controller implements Initializable {
     }
 
     @FXML
-    private void returnButton() throws Exception {
-        App.currentController.changeScene(Scenes.MAIN, null);
-    }
-
-    @FXML
-    public void registerClient() throws Exception {
+    private void registerClient() throws Exception {
         Client client = new Client();
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Registrado con exito");
         client.setDni(fieldDni.getText());
         client.setName(fieldName.getText());
         client.setSurnames(fieldSurnames.getText());
@@ -73,8 +67,60 @@ public class RegistrerController extends Controller implements Initializable {
         client.setMail(fieldMail.getText());
         client.setPassword(fieldPassword.getText());
         client.setAdmin(Integer.parseInt(fieldAdmin.getText()));
+        Alert alertSuccess = new Alert(Alert.AlertType.CONFIRMATION, "Registrado con exito");
+        Alert alertError = new Alert(Alert.AlertType.ERROR,
+                "-El DNI es nulo o tiene más de 10 caracteres \n" +
+                        "-El nombre es demasiado largo \n" +
+                        "-Los apellidos son demasiado largos \n" +
+                        "-El teléfono esta registrado en el sistema o es nulo o es demasiado largo \n" +
+                        "-El mail es nulo , esta registrado o no cumple con los requisitos o es demasiado largo \n" +
+                        "-La contraseña no cumple con los requisitos de seguridad o es nula o es demasiado larga \n" +
+                        "-El numero de admin es negativo o mayor a 10 o es nulo \n");
+
+
+        if (client.getDni().isEmpty() || client.getDni().length() > 10) {
+            alertError.showAndWait();
+            return;
+        }
+
+        if (client.getName().length() > 20) {
+            alertError.showAndWait();
+            return;
+        }
+        if (client.getSurnames().length() > 50) {
+            alertError.showAndWait();
+            return;
+        }
+        if (client.getPhone().length() > 9 || client.getPhone().isEmpty()) {
+            alertError.showAndWait();
+            return;
+        }
+        Client clientOnDB = clientDAO.findByMail(client.getMail());
+        if (clientOnDB != null) {
+            alertError.showAndWait();
+            return;
+        } else if (client.getMail().length() > 40 || client.getMail().isEmpty()) {
+            alertError.showAndWait();
+            return;
+        }
+
+        if (client.getPassword().length() > 140 || client.getPassword().isEmpty()) {
+            alertError.showAndWait();
+            return;
+        }
+        if (client.getAdmin() < 0 || client.getAdmin() > 10) {
+            alertError.showAndWait();
+            return;
+        }
         ClientDAO.build().save(client);
-        alert.showAndWait();
-        App.currentController.changeScene(Scenes.MAIN,null);
+        alertSuccess.showAndWait();
+        App.currentController.changeScene(Scenes.MAIN, null);
     }
+
+    @FXML
+    private void goToMainController() throws Exception {
+        App.currentController.changeScene(Scenes.MAIN, null);
+
+    }
+
 }

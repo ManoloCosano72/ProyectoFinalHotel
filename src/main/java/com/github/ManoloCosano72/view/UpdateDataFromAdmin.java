@@ -55,7 +55,7 @@ public class UpdateDataFromAdmin extends Controller implements Initializable {
         fieldPassword.setText(Session.getInstance().getUserLogged().getPassword());
     }
     @FXML
-    public void updateData() throws Exception {
+    private void updateData() throws Exception {
         Client client = new Client();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Sus datos han sido actualizados con exito");
         client.setName(fieldName.getText());
