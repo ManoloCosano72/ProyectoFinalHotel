@@ -12,7 +12,6 @@ public enum Scenes {
     DELETEROOM("view/deleteRoom.fxml"),
     CLIENTMENUOPTIONS("view/clientMenuOptions.fxml"),
     DELETERESERVESFROMCLIENT("view/deleteReservesFromClient.fxml"),
-    UPDATERESERVE("view/updateReserveFromclient.fxml"),
     UPDATEDATAFROMCLIENT("view/updateDataFromClient.fxml"),
     CREATERESERVE("view/createReserveFromClient.fxml");
 

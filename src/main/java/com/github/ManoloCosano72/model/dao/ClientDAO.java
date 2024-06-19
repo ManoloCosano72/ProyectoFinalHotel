@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ClientDAO implements DAO<Client, String> {
     private final static String FINDBYDNI = "SELECT Dni FROM Client WHERE Dni =?";
-    private final static String FINDBYMAIL = "SELECT Dni,Mail,Password FROM Client WHERE Mail =?";
+    private final static String FINDBYMAIL = "SELECT Dni,Mail,Password,Admin FROM Client WHERE Mail =?";
     private final static String FINDALL = "SELECT Dni, Name, Surnames, Phone,Mail,Admin FROM Client";
     private final static String DELETE = "DELETE FROM Client WHERE Dni=?";
     private final static String UPDATE = "UPDATE Client SET Name=?, Surnames=?, Phone=?, Mail=?, Password=?, Admin=?  WHERE Dni=? ";
@@ -80,7 +80,9 @@ public class ClientDAO implements DAO<Client, String> {
                 pst.setString(1, mail);
                 ResultSet res = pst.executeQuery();
                 if (res.next()) {
+                    result.setDni(res.getString("Dni"));
                     result.setMail(res.getString("Mail"));
+                    result.setAdmin(res.getInt("Admin"));
                 }
                 res.close();
             } catch (SQLException e) {

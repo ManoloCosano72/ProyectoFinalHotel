@@ -6,7 +6,6 @@ import com.github.ManoloCosano72.model.entity.Client;
 import com.github.ManoloCosano72.model.session.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -44,7 +43,7 @@ public class LoginController extends Controller implements Initializable {
     }
 
     @FXML
-    private void returnButton(Scene scene) throws Exception {
+    private void returnButton() throws Exception {
         App.currentController.changeScene(Scenes.MAIN, null);
     }
 
@@ -56,11 +55,11 @@ public class LoginController extends Controller implements Initializable {
 
         Client client = ClientDAO.build().findByMail(fieldMail.getText());
         Session.getInstance().logIn(client);
-        if (client.getAdmin() == 0) {
-            App.currentController.changeScene(Scenes.ADMINMENUOPTIONS, null);
-        } else if (client.getAdmin() > 0 || client.getAdmin() < 10) {
+        if (Session.getInstance().getUserLogged().getAdmin() == 0) {
+            App.currentController.changeScene(Scenes.ADMINMENUOPTIONS,null);
+        }
+        else if (Session.getInstance().getUserLogged().getAdmin() > 0 && Session.getInstance().getUserLogged().getAdmin() < 10) {
             App.currentController.changeScene(Scenes.CLIENTMENUOPTIONS, null);
         }
-
     }
 }

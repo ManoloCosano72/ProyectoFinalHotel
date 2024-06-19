@@ -52,7 +52,7 @@ public class UpdateDataFromClient extends Controller implements Initializable {
     }
 
     @FXML
-    public void updateData() throws Exception {
+    private void updateData() throws Exception {
         Client client = new Client();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Sus datos han sido actualizados con exito");
         client.setDni(fieldName.getText());

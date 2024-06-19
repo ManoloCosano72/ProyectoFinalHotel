@@ -2,6 +2,7 @@ package com.github.ManoloCosano72.view;
 
 import com.github.ManoloCosano72.App;
 import com.github.ManoloCosano72.model.entity.Reserve;
+import com.github.ManoloCosano72.model.session.Session;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,8 +24,6 @@ public class ClientMenuOptions extends Controller implements Initializable {
     private Button deleteReserves;
     @FXML
     private Button findAllReserves;
-    @FXML
-    private Button updateReserve;
     @FXML
     private Button updateData;
     @FXML
@@ -58,27 +57,29 @@ public class ClientMenuOptions extends Controller implements Initializable {
     }
 
     @FXML
-    public void goToDeleteReserves() throws Exception {
+    private void goToDeleteReserves() throws Exception {
         App.currentController.openModal(Scenes.DELETERESERVESFROMCLIENT, "Borrar reservas de la lista", this, null);
     }
 
     @FXML
-    public void goToUpdateDataFromClient() throws Exception {
+    private void goToUpdateDataFromClient() throws Exception {
         App.currentController.openModal(Scenes.UPDATEDATAFROMCLIENT, "Actualizar datos ", this, null);
     }
 
     @FXML
-    public void goToCreateReserve() throws Exception {
+    private void goToCreateReserve() throws Exception {
         App.currentController.openModal(Scenes.CREATERESERVE, "Crear reservas", this, null);
     }
 
+
+
     @FXML
-    public void goToUpdateReserve() throws Exception {
-        App.currentController.openModal(Scenes.UPDATERESERVE, "Actualizar reservas ", this, null);
+    private void findAllReserves() {
+
     }
-
     @FXML
-    public void findAllReserves() {
-
+    private void logOut(){
+        Session.LogOut();
+        System.exit(0);
     }
 }

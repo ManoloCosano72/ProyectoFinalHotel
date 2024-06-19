@@ -38,7 +38,7 @@ public class DeleteClients extends Controller implements Initializable {
 
     }
     @FXML
-    public void deleteClient() throws Exception {
+    private void deleteClient() throws Exception {
         Client client = new Client();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Cliente borrado con exito");
         client.setDni(fieldDni.getText());

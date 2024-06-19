@@ -17,6 +17,7 @@ public class AppController extends Controller implements Initializable {
     @FXML
     private BorderPane borderPane;
     private Controller centerController;
+
     public static View loadFXML(Scenes scenes) throws Exception {
         String url = scenes.getURL();
         System.out.println(url);
@@ -28,13 +29,15 @@ public class AppController extends Controller implements Initializable {
         view.controller = c;
         return view;
     }
+
     public void changeScene(Scenes scene, Object data) throws Exception {
         View view = loadFXML(scene);
         borderPane.setCenter(view.scene);
         this.centerController = view.controller;
         this.centerController.onOpen(data);
     }
-    public void openModal(Scenes scene, String title,Controller parent, Object data) throws Exception {
+
+    public void openModal(Scenes scene, String title, Controller parent, Object data) throws Exception {
         View view = loadFXML(scene);
         Stage stage = new Stage();
         stage.setTitle(title);
@@ -46,15 +49,17 @@ public class AppController extends Controller implements Initializable {
         stage.showAndWait();
     }
 
+    @Override
     public void onOpen(Object input) throws Exception {
         changeScene(Scenes.MAIN, null);
     }
 
+    @Override
     public void onClose(Object output) {
     }
 
-    @FXML
-    public void initialize(URL url, ResourceBundle rb)  {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
 
     }
 

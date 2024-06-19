@@ -50,7 +50,7 @@ public class CreateRooms extends Controller implements Initializable {
 
     }
     @FXML
-    public void createRooms() throws Exception {
+    private void createRooms() throws Exception {
         Room room = new Room();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Habitacion creada con exito");
         room.setCodRoom(fieldCodRoom.getText());
