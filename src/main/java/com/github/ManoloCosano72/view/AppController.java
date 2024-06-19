@@ -48,7 +48,7 @@ public class AppController extends Controller implements Initializable {
         view.controller.onOpen(parent);
         stage.showAndWait();
     }
-
+////////
     @Override
     public void onOpen(Object input) throws Exception {
         changeScene(Scenes.MAIN, null);
